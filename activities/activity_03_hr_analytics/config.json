@@ -7,7 +7,7 @@
   "duration_minutes": 30,
   "ai_tool": "Any AI tool (Claude, Copilot, Cursor, Gemini)",
   "difficulty": "Beginner",
-  "phases": 4,
+  "phases": 3,
   "plugins": [],
   "skill_chain": [],
   "data_files": [
@@ -19,11 +19,11 @@
     }
   ],
   "learning_objectives": [
-    "Choose a stack that communicates people data with clarity — RAG indicators and benchmark comparisons must read at a glance",
-    "Read an HR metrics file and identify the highest-risk signals before writing a single prompt",
-    "Validate your prompt to ensure every critical metric (attrition, engagement, pipeline) is explicitly specified",
-    "Build a people-health dashboard that turns dense HR data into action items for ExCo",
-    "Deliver a board-ready HR file a CHRO can present without needing Excel"
+    "Attach an HR metrics file and let the AI read every percentage and cost figure — your job is risk interpretation, not data lookup",
+    "Write the five things a spreadsheet cannot tell an AI: who is in the ExCo room, what the data story is, which department is the burning platform, what action is required, and which KPI is the hero",
+    "Specify RAG thresholds, benchmark comparisons, and an alert callout in the prompt so your first build already surfaces the risk signal — not buried in a table",
+    "Iterate with precision: name the single most important gap in your first output and fix only that in one follow-up",
+    "Deliver a board-ready HR dashboard a CHRO can present at an offsite without Excel — single HTML file, no server, no dependencies"
   ],
   "deliverable": "Single-file interactive HTML HR analytics dashboard"
 }

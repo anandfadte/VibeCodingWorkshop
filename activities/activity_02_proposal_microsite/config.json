@@ -7,7 +7,7 @@
   "duration_minutes": 30,
   "ai_tool": "Any AI tool (Claude, Copilot, Cursor, Gemini)",
   "difficulty": "Beginner",
-  "phases": 4,
+  "phases": 3,
   "plugins": [],
   "skill_chain": [],
   "data_files": [
@@ -19,11 +19,11 @@
     }
   ],
   "learning_objectives": [
-    "Choose a stack that creates a sales-grade visual experience — font, layout, and colour are persuasion tools",
-    "Read a prospect brief and identify what each stakeholder needs to see before they sign",
-    "Validate your prompt to ensure the ROI story and stakeholder messaging are both present before building",
-    "Build a proposal microsite that makes the value case impossible to miss",
-    "Deliver a self-contained HTML file a sales rep can open from their laptop in any client meeting"
+    "Attach a prospect brief and let the AI read every number — your job is persuasion strategy, not data lookup",
+    "Write the five things a data file cannot tell an AI: who is skeptical in the room, what hook opens the deal, which case study fits, which differentiator answers the objection, and what the CTA asks",
+    "Specify stakeholder cards and expandable interactions in the prompt so your first build is already a sales tool — not a static page",
+    "Iterate with precision: name the single most important gap in your first output and fix only that in one follow-up",
+    "Deliver a self-contained HTML proposal microsite a sales rep can open on a laptop in any client meeting — no server, no install, no dependencies"
   ],
   "deliverable": "Single-file interactive HTML proposal microsite"
 }

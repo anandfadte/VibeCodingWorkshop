@@ -7,7 +7,7 @@
   "duration_minutes": 30,
   "ai_tool": "Any AI tool (Claude, Copilot, Cursor, Gemini)",
   "difficulty": "Beginner",
-  "phases": 4,
+  "phases": 3,
   "plugins": [],
   "skill_chain": [],
   "data_files": [
@@ -19,11 +19,11 @@
     }
   ],
   "learning_objectives": [
-    "Choose a stack that makes channel comparison data immediately scannable — the best and worst performers must be unmissable",
-    "Read a campaign dataset and find the non-obvious insight before building — not just the headline miss",
-    "Validate that your prompt names the worst channel ($270k per opp) and the best ($12,917) explicitly before firing",
-    "Build a campaign postmortem that gives leadership a clear Q4 budget reallocation decision",
-    "Deliver a decision-ready report that replaces a 20-slide deck with one interactive HTML file"
+    "Attach a campaign dataset and let the AI read every spend figure and conversion rate — your job is budget judgment, not data lookup",
+    "Write the five things a spreadsheet cannot tell an AI: who is making the Q4 decision, what verdict the data supports, what the hidden insight is, where the Q4 money should go, and what the single biggest bet is",
+    "Specify a channel comparison chart sorted by cost per opportunity so the best-to-worst gap is visually dramatic — not buried in a table",
+    "Iterate with precision: name the single most important gap in your first output and fix only that in one follow-up",
+    "Deliver a decision-ready campaign postmortem that replaces a 20-slide deck with one interactive HTML file — no server, no install, no dependencies"
   ],
   "deliverable": "Single-file interactive HTML campaign performance report"
 }

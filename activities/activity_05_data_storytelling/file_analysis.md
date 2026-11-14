@@ -1,36 +1,35 @@
-﻿# Validate
-> Paste your prompt into a neutral AI. Ask it to find gaps — not build. 5 minutes here saves 15 minutes of iteration later.
+﻿# Build
+> Fire. Open in browser. Watch the animations. Iterate once. Ship.
 
 ## scenario
-
-You have a complete, deepened campaign report prompt. Before firing it in Claude, run it through a neutral AI — Gemini, Microsoft Copilot, or ChatGPT — and ask it to review the prompt, not build from it.
-
-For a campaign report, the most common gap is a channel comparison that shows numbers without naming the decision — a CMO who has to calculate the reallocation themselves will not make a decision in the meeting.
+You have a prompt with five narrative decisions already made. The AI will read all numbers from campaign_analysis.json. Your one job now is to fire it, check the output against the design standard, and fix the single most important gap.
 
 ## do_this
+**Step 1 — Fire**
+Attach campaign_analysis.json to your AI conversation. Paste your completed prompt. Copy the HTML output.
 
-1. Open Gemini (or Copilot) in a new tab — not Claude
-2. Paste your full prompt
-3. Add this review instruction at the very top:
+**Step 2 — Open and compare**
+Save as campaign_q3_report.html. Open in a browser. Compare against screenshot_2.png. Check:
+- Do the opportunity attainment numbers count up on load?
+- Is the channel bar chart sorted by cost per opportunity, with the best bar green and the worst red?
+- Is the gap between $12,917 and $270,000 visually dramatic — not a footnote?
 
----
-Review the following campaign performance report build prompt. Do not build anything. Identify:
-1. Any [PLACEHOLDER] I forgot to replace with a real value
-2. Any channel in the comparison table where the data would make the CMO ask a follow-up question instead of acting
-3. Any recommendation in the prompt that names what to do but not by how much (a recommendation without a number is not a recommendation)
-4. One specific improvement to make the Q4 budget reallocation argument more compelling
-
-[PASTE YOUR FULL PROMPT HERE]
----
-
-4. Read the review. Apply any fix that takes under 60 seconds.
-5. One pass only — do not iterate endlessly here.
+**Step 3 — One targeted iteration**
+In the same conversation, describe the single most important gap: a chart that doesn't sort correctly, a missing toggle, or numbers that look similar when they should look dramatically different. Send one follow-up. Copy the updated HTML.
 
 ## checkpoint
+You are done when:
+- [ ] 67/150 opportunity attainment animates from 0 on load
+- [ ] Channel bars are sorted by cost per opportunity, lowest to highest
+- [ ] Best and worst channels are colour-coded green and red
+- [ ] The toggle between "Cost per Opportunity" and "Lead Quality" views works
+- [ ] No console errors — all charts and animations fire
 
-Before moving to Build:
-- Prompt reviewed by a neutral AI (Gemini or Copilot — not Claude)
-- Executive Roundtables and Webinars are explicitly named in the recommendations with their CPO figures
-- The reallocation recommendation names a specific dollar amount and expected opportunity count
-- One improvement applied, or confirmed none needed
-- Full prompt is copied and ready to paste in Claude
+## reveal_good
+A strong campaign postmortem does one thing most decks fail to do:
+- It makes the **reallocation case visually unavoidable** — when the bar for Webinars is 20x longer than Executive Roundtables, no one argues for keeping the spend
+
+The toggle between cost efficiency and lead quality is the analytical sophistication that separates this from a marketing dashboard. Some channels look terrible on cost but deliver high-quality leads. Some look cheap but fill the funnel with noise. The report shows both.
+
+## reveal_takeaway
+The key lesson: marketing data is usually presented as "here is what happened" — a respectful post-mortem that protects everyone. Your prompt specified the verdict, the hidden insight, and the specific reallocation figures. The AI built the visual. The difference between a data story and a data dump is the five decisions you made before firing.

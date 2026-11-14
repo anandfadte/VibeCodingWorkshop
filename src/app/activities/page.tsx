@@ -79,24 +79,8 @@ export default async function ActivitiesPage() {
           </div>
         </div>
 
-        {/* Plugin & skill legend */}
-        <div className="mt-6 flex flex-wrap gap-3 border-t border-border pt-4">
-          <span className="inline-flex items-center gap-1.5 rounded-md bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-700 dark:text-sky-400">
-            Phase 2 — Web Search (find examples)
-          </span>
-          <span className="inline-flex items-center gap-1.5 rounded-md bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-700 dark:text-purple-400">
-            Phase 3 — Upload your data file
-          </span>
-          <span className="inline-flex items-center gap-1.5 rounded-md bg-orange-500/10 px-3 py-1 text-xs font-medium text-orange-700 dark:text-orange-400">
-            Phase 5 — Run the build chain
-          </span>
-          <span className="inline-flex items-center gap-1.5 rounded-md bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-700 dark:text-amber-400">
-            Phase 6 — /human always last
-          </span>
-        </div>
-
-        <p className="mt-4 text-xs text-text-muted">
-          Phases unlock one at a time. Run all skills in the same AI conversation — context compounds across each step. Works with Claude, Copilot, Cursor, or any AI tool.
+        <p className="mt-6 border-t border-border pt-4 text-xs text-text-muted">
+          Each phase builds on the last. Works with Claude, Copilot, Cursor, or any AI tool.
         </p>
       </div>
 

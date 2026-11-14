@@ -1,39 +1,77 @@
 ﻿# Craft
-> Your placeholders are filled. Now deepen the prompt — add the specific insights that turn a project list into an escalation agenda for Priya's review.
-
-## scenario
-
-You have a filled prompt from Stack. It has the right projects and the right RAG colors. Now it needs the right narrative — the insight that tells Priya not just which projects are Red, but what specifically she needs to do before the next review.
-
-This phase adds three layers to your prompt before you fire it.
+> Build the prompt. Five blanks to fill — all require business judgment, not data lookup.
 
 ## context
-
-Look at your filled prompt from Stack. Find these three gaps and add the missing instructions now.
-
-**Gap 1 — The P010 scope creep story.** P010 (Apex Global Digital Transformation) has 94% budget consumed with 15% of scope incomplete — a $420k change request is waiting for client approval. This is the highest-value project at risk and needs an action callout. Add this instruction to the P010 escalation card:
-
-`On the P010 escalation card, add an action callout box in bold: "Change request outstanding — $420k pending client approval. Without approval by [set a date 2 weeks from reporting date], the project cannot complete remaining scope. Escalation owner: Priya Nair."`
-
-**Gap 2 — The Q1 2025 risk radar.** 6 projects are due in Q1 2025 — but some of them already have Amber status. Projects with an Amber status AND a Q1 deadline are the early warnings before they turn Red. Add this instruction after the main project table:
-
-`Add a Q1 2025 Deadline Alert section: list only the projects with planned_end_date in Q1 2025 (Jan–Mar 2025). Highlight any that are currently Amber or Red with a warning badge: "Q1 at risk — requires attention before year-end." This section should appear between the escalation cards and the full project table.`
-
-**Gap 3 — The budget consumption pattern.** Projects at > 80% budget with more than 20% timeline remaining are the ones most likely to become Red. Add this instruction to the project table:
-
-`In the project table, add a "Budget Warning" indicator (amber triangle icon) next to any project where budget_consumed_pct > 80% AND the planned end date is more than 30 days away from the reporting date (2024-12-01). This catches emerging problems before they escalate to Red.`
+The AI will read all project statuses, budget figures, milestone states, client satisfaction scores, and risk statements directly from project_tracker.json. Your job is to supply what the data file cannot: who is running this review, what management story the RAG counts tell, and what specific decision each Red project needs from leadership today.
 
 ## do_this
+Read the five placeholders. Write your answers directly into the prompt below.
 
-Add all three gaps to your prompt. The result should be 300–350 words total.
+## prompt
+Build a single-file HTML project portfolio dashboard for Genpact Client Delivery APAC.
 
-Read the completed prompt once before moving to Validate. If you can point to P010's action callout, the Q1 risk radar, and the budget warning indicator and say what Priya should do about each one, you are ready.
+AUDIENCE:
+[WHO_IS_IN_THE_ROOM → one sentence: who is running this leadership review and what decisions must leave this meeting? Name at least two decisions that require VP-level authority.]
+
+DATA: Attach project_tracker.json to this conversation. Read all project statuses, RAG ratings, contract values, budget consumed %, milestone states, risk statements, and client satisfaction scores directly from the file — do not ask me for numbers, do not hardcode values.
+
+DESIGN KIT — do not change these lines:
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts@3.54.0/dist/apexcharts.min.js"></script>
+
+DESIGN: Inter font. Background #F8FAFC. Accent #0F172A (slate). Text #1E293B. White card surfaces. RAG: Green #16A34A, Amber #D97706, Red #DC2626. Match the layout and visual treatment shown in screenshot_1.png and screenshot_2.png.
+
+PORTFOLIO NARRATIVE:
+[REVIEW_NARRATIVE → 2 sentences. What is the management story of this portfolio in December 2024? Go beyond "3 of 22 projects are Red" — state what the pattern means for delivery confidence and client relationships heading into Q1.]
+
+PORTFOLIO SUMMARY ROW — 5 stat tiles at the top:
+Tile 1 — Total Projects: total, with breakdown (Green / Amber / Red)
+Tile 2 — Revenue at Risk: the dollar figure. Source: summary.revenue_at_risk_usd. Make this tile Red — it is the headline number.
+Tile 3 — On-Track Rate: % of portfolio Green. Source: summary.on_track_pct.
+Tile 4 — Headcount Deployed: total people. Source: summary.total_headcount_deployed.
+Tile 5 — Q1 Deliveries: projects due next quarter. Source: summary.projects_due_q1_2025.
+
+ESCALATION SECTION — display before the project list:
+[ESCALATION_PRIORITY → Which of the two Red projects (P003 or P010) is the more urgent escalation requiring VP action today, and why? The other is serious — but one requires a decision in this meeting that cannot wait. Name your choice and state the specific decision needed.]
+
+Show P003 and P010 each as a prominent red escalation card. For each: project name, client, risk statement (from the data file), budget consumed %, client satisfaction score, and the specific decision required (use your answer from ESCALATION_PRIORITY for the higher-priority one).
+
+P003 ACTION:
+[P003_ACTION → Write the specific action required for Sunrise Distribution. Who is the accountable owner, what must they do, and by what date? Reference the penalty clause risk from the data.]
+
+P010 ACTION:
+[P010_ACTION → Write the specific action required for Apex Global. The $420k change request is pending client approval — what happens if the client does not approve it? Who owns this escalation and by when must the decision be made?]
+
+PROJECT TABLE — all 10 projects:
+Columns: ID | Project Name | Client | Status (RAG badge) | Phase | Budget Consumed % (progress bar) | Next Milestone | Client Satisfaction (star or score)
+Sort: Red first, then Amber, then Green.
+RAG badge: filled colour background, white text — Red/Amber/Green must be visually unmissable.
+Budget bar: colour-coded — green if <70%, amber if 70-85%, red if >85%.
+
+CHARTS:
+1. Portfolio RAG donut — Green/Amber/Red count. Source: summary fields.
+2. Budget consumed by project — horizontal bar chart, all 10 projects, sorted by consumed % descending. P010 and P003 must visually stand out.
+
+ANIMATION — do not change or remove any of these:
+- Revenue at risk tile: counts up from $0 to actual on page load, 2.5s easeOut (the number must land with weight)
+- Red project count: counts up from 0 to 3, 1s easeOut
+- Portfolio RAG donut: sweeps in clockwise, 1000ms, Red segment first
+- Budget bars: stagger fill left to right, 80ms between bars, colour transitions in with fill
+- Project table rows: cascade fade-in top to bottom, 60ms between rows (Red rows first)
+- Escalation cards: slide in from the left, 300ms stagger between P003 and P010
+- Summary tiles: cascade fade-in left to right, 120ms between tiles
+- Chart sections: fade up when scrolled into view
+
+INTERACTIVITY: Alpine.js RAG filter — All / Red / Amber / Green. Clicking a status filters the project table to that RAG group. Red is the default view on page load — leadership opens to escalations first.
+
+One complete self-contained HTML file. All data from the attached JSON file — no hardcoded values, no fetch calls.
 
 ## checkpoint
-
-Before moving to Validate:
-- P010 action callout added with the $420k change request and escalation owner
-- Q1 2025 Deadline Alert section added between escalation cards and the full project table
-- Budget warning indicator added for projects > 80% consumed with time remaining
-- Prompt is 300–350 words
-- Every figure in the prompt traces back to the data file
+Your prompt is ready when:
+- [ ] You named the two VP-level decisions that must leave this meeting
+- [ ] Your portfolio narrative states the management story, not just the counts
+- [ ] You identified which Red project is more urgent and why
+- [ ] P003 action names an owner, a specific action, and a date
+- [ ] P010 action addresses what happens if the client does not approve the change request

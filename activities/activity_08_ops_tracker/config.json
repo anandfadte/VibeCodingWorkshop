@@ -7,7 +7,7 @@
   "duration_minutes": 30,
   "ai_tool": "Any AI tool (Claude, Copilot, Cursor, Gemini)",
   "difficulty": "Beginner",
-  "phases": 4,
+  "phases": 3,
   "plugins": [],
   "skill_chain": [],
   "data_files": [
@@ -19,11 +19,11 @@
     }
   ],
   "learning_objectives": [
-    "Choose a stack that makes RAG status impossible to miss — a Red project must look Red before you read a word",
-    "Read a portfolio file and identify the two critical escalations before writing a single prompt",
-    "Validate that your prompt names P003 and P010 explicitly and specifies what the Red indicators must show",
-    "Build a portfolio tracker that lets a VP run a 15-minute leadership review without PowerPoint",
-    "Deliver a dashboard that surfaces $8.2M revenue at risk in the first 10 seconds of viewing"
+    "Attach a portfolio data file and let the AI read every RAG status, budget figure, and risk statement — your job is escalation judgment, not data lookup",
+    "Write the five things a tracker cannot tell an AI: who is running the review, what the management story is, which Red project is more urgent, and what specific action each escalation requires",
+    "Specify a RAG filter defaulting to Red view so leadership opens to escalations first — not buried in row 7 of a sorted table",
+    "Iterate with precision: name the single most important gap in your first output and fix only that in one follow-up",
+    "Deliver a portfolio dashboard that lets a VP run a 15-minute leadership review without PowerPoint — single HTML file, no server, no dependencies"
   ],
   "deliverable": "Single-file interactive HTML project portfolio dashboard"
 }

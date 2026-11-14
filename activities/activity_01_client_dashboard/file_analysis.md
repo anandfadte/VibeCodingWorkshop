@@ -1,35 +1,59 @@
-# Validate
-> Paste your prompt into a neutral AI. Ask it to find gaps — not build. 5 minutes here saves 15 minutes of iteration later.
+# Build
+> Fire. Open in browser. Watch the animations. Iterate once. Ship.
 
 ## scenario
 
-You have a complete, deepened prompt. Before firing it in Claude, run it through a neutral AI — Gemini, Microsoft Copilot, or ChatGPT — and ask it to review the prompt, not build from it.
+Your prompt is ready. Open your AI tool in a new tab — Claude.ai, Copilot, Cursor, or whichever you are using. Keep this platform tab open alongside it. You have 13 minutes.
 
-A neutral AI catches what you cannot see: unfilled placeholders, ambiguous instructions, design conflicts, or chart specifications that will confuse the build AI.
+Target: a working, animated dashboard in the browser within 10 minutes. Use any remaining time to iterate.
 
 ## do_this
 
-1. Open Gemini (or Copilot) in a new tab — not Claude
-2. Paste your full prompt
-3. Add this review instruction at the very top before your prompt text:
+**Step 1 — Fire:**
+1. Open Claude.ai (or your AI tool) in a new tab
+2. Attach `q4_performance_data.json` to the conversation
+3. Paste your filled prompt
+4. When the AI responds, copy the full HTML code block
 
----
-Review the following dashboard build prompt. Do not build anything. Identify:
-1. Any [PLACEHOLDER] I forgot to replace with a real value
-2. Any instruction that is ambiguous or could be interpreted two ways
-3. Any information the AI would need to guess because I left it out
-4. One specific improvement to make the design instruction clearer
+**Step 2 — Open in browser:**
+5. Save the HTML as `meridian_qbr.html` on your desktop
+6. Double-click to open in Chrome or Edge
+7. Watch: revenue should count up, charts should animate in, the alert callout should slide in after a brief delay
+8. Compare against `screenshot_2.png` — does the visual quality match?
 
-[PASTE YOUR FULL PROMPT HERE]
----
+**Step 3 — One targeted iteration:**
+9. Identify the single most important gap between your output and `screenshot_2.png`
+10. Write one clear follow-up instruction that fixes only that gap — be specific about what you want changed
+11. Fire it in the same conversation — do not start a new chat (context from the first build matters)
 
-4. Read the review. Apply any fix that takes under 60 seconds.
-5. One pass only — do not iterate endlessly here.
+**If time permits — further refinements:**
+Ask Claude to add hover states to the client table rows, animate the regional filter transition, or add a print button that removes animations for PDF export.
 
 ## checkpoint
 
-Before moving to Build:
-- Prompt reviewed by a neutral AI (Gemini or Copilot — not Claude)
-- Any unfilled [PLACEHOLDER] items are corrected
-- One improvement applied, or confirmed none needed
-- Full prompt is copied and ready to paste in Claude
+Done — confirm all five before presenting:
+- Revenue tile counts up on page load and is visually larger and bolder than the other three tiles
+- Sunrise Distribution shows a red badge and red row highlight, visible without scrolling
+- Alert callout appears below the client table in amber with specific numbers and an action by-when date
+- Pipeline section shows a green confidence badge and the coverage ratio animated in on load
+- File opens in a browser with no errors and all four charts render with their entrance animations
+
+## reveal_good
+
+**What strong output looks like:**
+
+When the presenter opens the page, the revenue number counting up from $0 to $42.8M in two seconds does something a PowerPoint slide cannot — it makes the room wait for the number. That is the opening this QBR deserves.
+
+The regional bar chart staggering in from left to right gives the presenter a natural pause before each region, turning a chart into a live walkthrough.
+
+Sunrise Distribution's red badge pulsing — not static — signals urgency that the eye catches even while reading a different row. The amber callout that slides in after the page settles lands as a recommendation, not just a flag: a named client, a number, an action, a date.
+
+The 1.28× pipeline coverage counting up is the close. It answers the unspoken question — "are we funded for Q1?" — before anyone asks.
+
+## reveal_takeaway
+
+The difference between a mediocre dashboard and a remarkable one is not the template or the library. It is the five sentences you wrote in Craft.
+
+Every participant in this room built from the same data file. Only yours has the right story framing, the right hero metric, and the right action statement — because those came from you, not the spreadsheet. The AI handled the execution. You handled the judgment.
+
+That division of labour is what professional vibe coding looks like. It scales to any dataset, any deliverable, any audience — because the judgment always belongs to you.

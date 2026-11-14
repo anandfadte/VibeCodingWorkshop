@@ -2,10 +2,9 @@ import { getActivities } from "@/lib/activities";
 import { ActivityGrid } from "@/components/ActivityGrid";
 
 const PHASES = [
-  { name: "Stack", time: "~5 min", label: "Pick your CDN toolkit" },
-  { name: "Craft", time: "~8 min", label: "Data-driven prompt" },
-  { name: "Validate", time: "~5 min", label: "Check in neutral AI" },
-  { name: "Build", time: "~12 min", label: "Fire, iterate, ship" },
+  { name: "Brief", time: "~5 min", label: "Scenario + design standard" },
+  { name: "Craft", time: "~12 min", label: "Build the prompt" },
+  { name: "Build", time: "~13 min", label: "Fire, iterate, ship" },
 ];
 
 export default async function ActivitiesPage() {
@@ -40,7 +39,7 @@ export default async function ActivitiesPage() {
         </h1>
         <p className="mt-3 max-w-[680px] text-text-secondary">
           Each activity gives you a real business scenario and a data file.
-          Work through four phases using any AI tool to build a client-ready interactive dashboard — no installation, no server, just a single HTML file — in 30 minutes.
+          Work through three phases using any AI tool to build a client-ready interactive dashboard — no installation, no server, just a single HTML file — in 30 minutes.
         </p>
       </div>
 

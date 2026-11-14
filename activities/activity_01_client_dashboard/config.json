@@ -7,7 +7,7 @@
   "duration_minutes": 30,
   "ai_tool": "Any AI tool (Claude, Copilot, Cursor, Gemini)",
   "difficulty": "Foundation",
-  "phases": 4,
+  "phases": 3,
   "plugins": [],
   "skill_chain": [],
   "data_files": [
@@ -19,11 +19,11 @@
     }
   ],
   "learning_objectives": [
-    "Choose the right CDN stack before writing a single prompt — the stack shapes every decision that follows",
-    "Read a data file and translate what you see into specific prompt instructions, not generic descriptions",
-    "Validate your prompt in a neutral AI tool before firing in your build tool — a checked prompt produces 80% right output on the first attempt",
-    "Iterate with precision: name the exact issue, fix only that, keep everything else intact",
-    "Deliver a self-contained HTML dashboard that opens in any browser with no install, no server, no dependencies"
+    "Attach a data file to your AI and let it read every number — your job is context and judgment, not data lookup",
+    "Write the five things a spreadsheet cannot tell an AI: who is in the room, what story the data tells, which number is the hero, and what action is required",
+    "Specify animations and interactivity in a prompt so your first build already has the wow layer — not as an afterthought",
+    "Iterate with precision: name the single most important gap in your first output and fix only that in one follow-up",
+    "Deliver a self-contained HTML dashboard with working animations that opens in any browser — no install, no server, no dependencies"
   ],
   "deliverable": "Single-file interactive HTML QBR dashboard"
 }

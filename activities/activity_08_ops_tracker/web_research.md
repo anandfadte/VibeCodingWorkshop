@@ -1,102 +1,39 @@
 ﻿# Craft
-> A prompt that says "show project status" produces a list. One that says "P003 Sunrise: Red, UAT failed on Nov 28, penalty clause activates Dec 15, 87% budget consumed with 35% work remaining, client satisfaction 2.1/5" produces a card that Priya can act on before 9am.
+> Your placeholders are filled. Now deepen the prompt — add the specific insights that turn a project list into an escalation agenda for Priya's review.
 
 ## scenario
 
-You have read the data file. Here is what it tells you:
+You have a filled prompt from Stack. It has the right projects and the right RAG colors. Now it needs the right narrative — the insight that tells Priya not just which projects are Red, but what specifically she needs to do before the next review.
 
-**The portfolio**: 10 projects shown (22 total in the full portfolio). Distribution: 12 Green, 7 Amber, 3 Red. $8.2M revenue at risk from the three Red projects.
-
-**The two critical escalations** — these must dominate your dashboard:
-
-**P003 — Sunrise Retail Transformation** (RED — ESCALATE TODAY)
-- Status: UAT failed Nov 28. Milestone: Integration Testing missed by 3 weeks.
-- Budget: 87% consumed, 35% work remaining (severely over-consumed)
-- Risk: Penalty clause activates Dec 15 — 11 days away
-- Client satisfaction: 2.1/5 (critical)
-- Action needed: Emergency steering committee, penalty clause mitigation
-
-**P010 — Apex Global Finance Automation** (RED — ESCALATE TODAY)
-- Status: 15% scope incomplete, delivery at risk
-- Budget: 94% consumed ($420,000 change request pending approval)
-- Risk: $3.8M revenue at risk if delayed
-- Client satisfaction: 2.8/5
-- Action needed: Scope decision by Dec 10 — 6 days away
-
-**The Amber projects** (monitor, don't escalate):
-- P007 TechCorp: 71% budget, resource constraint
-- P012 Global Financial: 58% budget, stakeholder alignment issue
-- P015 RetailMax: 63% budget, minor scope adjustment
-
-**The Green projects**: P001, P002, P004, P005, P006 — on track, no action needed
-
-**The $8.2M figure**: P003 $1.8M + P010 $3.8M + P017 $2.6M = $8.2M total at risk. This is the number that opens the leadership review.
+This phase adds three layers to your prompt before you fire it.
 
 ## context
 
-A portfolio tracker prompt has two jobs: define the status logic (what makes a card Red vs Amber) and define the interaction (how the viewer gets from the summary to the detail). Most prompts only do the first. Specifying Alpine.js filter buttons and expandable detail panels in the prompt is what takes your output from a static table to a usable tool.
+Look at your filled prompt from Stack. Find these three gaps and add the missing instructions now.
 
-The expandable panel structure matters: when Priya clicks P003, she needs to see the penalty date, the budget burn, the failed milestone, and the recommended action — all in one place. That is four named data fields in your prompt, not "show project details."
+**Gap 1 — The P010 scope creep story.** P010 (Apex Global Digital Transformation) has 94% budget consumed with 15% of scope incomplete — a $420k change request is waiting for client approval. This is the highest-value project at risk and needs an action callout. Add this instruction to the P010 escalation card:
+
+`On the P010 escalation card, add an action callout box in bold: "Change request outstanding — $420k pending client approval. Without approval by [set a date 2 weeks from reporting date], the project cannot complete remaining scope. Escalation owner: Priya Nair."`
+
+**Gap 2 — The Q1 2025 risk radar.** 6 projects are due in Q1 2025 — but some of them already have Amber status. Projects with an Amber status AND a Q1 deadline are the early warnings before they turn Red. Add this instruction after the main project table:
+
+`Add a Q1 2025 Deadline Alert section: list only the projects with planned_end_date in Q1 2025 (Jan–Mar 2025). Highlight any that are currently Amber or Red with a warning badge: "Q1 at risk — requires attention before year-end." This section should appear between the escalation cards and the full project table.`
+
+**Gap 3 — The budget consumption pattern.** Projects at > 80% budget with more than 20% timeline remaining are the ones most likely to become Red. Add this instruction to the project table:
+
+`In the project table, add a "Budget Warning" indicator (amber triangle icon) next to any project where budget_consumed_pct > 80% AND the planned end date is more than 30 days away from the reporting date (2024-12-01). This catches emerging problems before they escalate to Red.`
 
 ## do_this
 
-Use the prompt scaffold below. Replace every `[BRACKET]`. The P003 and P010 detail sections are the most important — make sure every figure in them matches the data file exactly.
+Add all three gaps to your prompt. The result should be 300–350 words total.
 
-## prompt
-
-Build a single-file HTML project portfolio dashboard for Genpact APAC Client Delivery — Monday leadership review for Priya Nair, VP Client Delivery.
-
-[PASTE STACK CARD HERE]
-
-DASHBOARD HEADER:
-Title: "APAC Client Delivery — Portfolio Review"
-Date: December 2024
-Revenue at risk banner: "$[8.2]M revenue at risk — [3] projects require immediate action" — style in RAG Red background
-
-RAG SUMMARY ROW — three stat tiles:
-- Red: [3] projects | Amber: [7] projects | Green: [12] projects
-- Each tile uses the exact RAG background and border colours from the stack card
-
-FILTER BUTTONS (Alpine.js):
-Buttons: All | 🔴 Red | 🟡 Amber | 🟢 Green
-Default view: show Red projects first, then Amber, then Green
-On filter click: show only matching cards, hide others with x-show
-
-PROJECT CARDS — one card per project, RAG-coloured border and background:
-Each card shows:
-- Project ID + Client name (bold)
-- RAG status chip
-- Budget consumed % — show as a progress bar, red if >85%
-- Key risk (one line)
-- Client satisfaction X/5
-- "View details →" button
-
-EXPANDABLE DETAIL PANEL (Alpine.js x-show):
-On "View details" click, expand below the card to show:
-- Milestone status table: milestone name | due date | status | days variance
-- Budget breakdown: consumed $X of $Y total
-- Risk details: full risk description + impact
-- Recommended action: specific next step with deadline
-
-P003 SUNRISE — populate with these exact values:
-Budget: 87% consumed | Risk: Penalty clause Dec 15 | Sat: 2.1/5
-Detail: UAT failed Nov 28, Integration Testing 3 weeks late, $1.8M revenue at risk
-Action: "Emergency steering committee required by Dec 12"
-
-P010 APEX GLOBAL — populate with these exact values:
-Budget: 94% consumed | $420K CR pending | Sat: 2.8/5
-Detail: 15% scope incomplete, $3.8M at risk, scope decision needed
-Action: "Scope decision required by Dec 10"
-
-BUDGET CONSUMPTION CHART (ApexCharts horizontal bar):
-Show all 10 projects, sorted by budget consumed % descending
-Colour bars: >85% red, 60–85% amber, <60% green
-Add vertical reference line at 75% labelled "Warning threshold"
+Read the completed prompt once before moving to Validate. If you can point to P010's action callout, the Q1 risk radar, and the budget warning indicator and say what Priya should do about each one, you are ready.
 
 ## checkpoint
 
 Before moving to Validate:
-- P003 and P010 detail sections have exact figures from the data file
-- The penalty clause date (Dec 15) is in your P003 specification
-- The $8.2M revenue-at-risk figure is in your header specification
-- Alpine.js filter buttons and expandable panels are specified — not just "add interactivity"
+- P010 action callout added with the $420k change request and escalation owner
+- Q1 2025 Deadline Alert section added between escalation cards and the full project table
+- Budget warning indicator added for projects > 80% consumed with time remaining
+- Prompt is 300–350 words
+- Every figure in the prompt traces back to the data file

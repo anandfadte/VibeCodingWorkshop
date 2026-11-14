@@ -1,57 +1,72 @@
 # Stack
-> Pick your CDN toolkit before writing your first prompt — 5 minutes here saves 20 minutes of debugging.
+> Read the brief. Review the design standard. Fill in the prompt placeholders. Exit in 5 minutes with a complete, ready-to-fire prompt.
 
 ## scenario
 
-You have a client QBR dashboard to build. The data is ready. The deadline is real. Before you open your AI tool, you need to make one decision: **what stack are you building with?**
+**Client:** Meridian Retail Group
+**Deliverable:** Single-file interactive HTML QBR dashboard
+**Audience:** Leadership team — quarterly business review, tomorrow
+**Your data file:** `q4_performance_data.json`
+**Design reference:** `screenshot_1.png` and `screenshot_2.png` in your folder
 
-In vibe coding, the AI will fill in tech decisions for you if you do not make them first — and those decisions are often wrong. A React component you cannot install. TypeScript that breaks in a plain browser. A framework that needs a build step. The result: 20 minutes debugging before you have built a single chart.
-
-Pick your stack now. Lock it in. It takes 5 minutes and shapes every prompt you write from here on.
+You are not building anything in this phase. You are setting up: reviewing what you have, understanding the quality bar, and filling in the prompt template below.
 
 ## context
 
-For this activity you are building a **browser-only HTML dashboard** — single file, no server, no install, opens with a double-click. That constraint makes the stack choice straightforward.
+Open `screenshot_1.png` and `screenshot_2.png` from your folder. **Treat these like a Figma handoff** — in professional practice, a designer builds the visual first, then hands it to the developer (or AI) and says "build this." That is exactly what you are doing now. Your final dashboard must match this quality before sharing with a client.
 
-**Tailwind CSS** — utility-first CSS loaded via CDN. Full design system in class names: layout, typography, colour, spacing. No separate CSS file. `<div class="text-2xl font-bold text-indigo-600">` just works.
+Four non-negotiable rules extracted from the standard:
 
-**Alpine.js** — lightweight JavaScript for interactivity. Tabs, filters, expand/collapse, show/hide — without React or Vue. Uses `x-data`, `x-show`, `x-on:click` attributes directly in HTML. No build step, no bundler.
+**1. Color** — Primary `#4F46E5` for headlines, tiles, and chart accents. `#F8FAFC` page background. White card surfaces. `#64748B` body text. No other color choices unless specified.
 
-**ApexCharts** — data visualisation library. Renders bar charts, line charts, donut charts, sparklines into a `<div id="chart">` with a simple JS config object. Professional chart output with zero configuration overhead.
+**2. Typography** — Inter font throughout (already in the prompt below). `font-weight: 800` for headline numbers. `font-weight: 500` for card labels and titles. `font-weight: 400` for descriptions. One font, three weights.
 
-For a data-heavy QBR dashboard, all three are the right call. Together they produce consulting-quality output in a single HTML file.
+**3. Layout** — Scorecard tiles visible at the top without scrolling. Charts in a 2-column grid below. Client table at the bottom. No horizontal scroll at any screen width.
+
+**4. Interactivity** — At least one working interactive element: a region selector, a chart toggle, or a risk filter. A static page saved as HTML is not the deliverable.
 
 ## do_this
 
-Review the stack card below, then copy it. You will paste it into your build prompt in Phase 2 as your **stack declaration** — the exact libraries the AI must use, and the exact colours it must apply.
+Open `q4_performance_data.json`. Read it for 3 minutes.
 
-Locking in the colour palette here prevents the AI from choosing its own colour scheme, which is almost always generic.
+Find each `[PLACEHOLDER]` in the sample prompt below and replace it with the real value from the data file. Each placeholder tells you exactly which field to look in. Do not change the STACK block, the DESIGN line, or the chart structure — only fill in the placeholders.
 
 ## prompt
 
-STACK — use these exact CDN links, no others:
+Build a single-file HTML QBR dashboard for [CLIENT_NAME → `company` field in q4_performance_data.json].
 
+STACK — do not change these:
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.54.0/dist/apexcharts.min.js"></script>
 
-COLOUR PALETTE:
-- Primary: #4F46E5
-- Background: #F8FAFC
-- Surface: #FFFFFF
-- Border: #E2E8F0
-- Text primary: #1E293B
-- Text muted: #64748B
+DESIGN: Inter font. Primary #4F46E5. Background #F8FAFC. White card surfaces. Text #1E293B. Refer to screenshot_1.png and screenshot_2.png for layout and visual standard.
 
-## tip
+AUDIENCE: [AUDIENCE → `prepared_for` field]
 
-Why no React, TypeScript, or Node? Vibe coding builds for portability. A single HTML file opens on any laptop, in any browser, with no terminal, no npm install, no "it works on my machine" problem. The constraint is deliberate — you are building a consulting artefact, not a web application. CDN tools are the right tool for the job.
+HEADLINE SCORECARD — 4 tiles across the top:
+- Revenue: [ACTUAL_REVENUE → `summary.total_revenue`] actual vs [TARGET_REVENUE → `summary.revenue_target`] target — [ATTAINMENT → `summary.revenue_attainment_pct`]% attainment, +[YOY → `summary.yoy_growth_pct`]% YoY
+- Active clients: [TOTAL_CLIENTS → `summary.total_active_clients`] total, [NEW_CLIENTS → `summary.new_clients_q4`] new this quarter, [CHURNED → `summary.churned_clients_q4`] churned
+- NPS: [NPS_ACTUAL → `summary.net_promoter_score`] actual vs [NPS_TARGET → `summary.nps_target`] target
+- Gross margin: [MARGIN_ACTUAL → `summary.gross_margin_pct`]% actual vs [MARGIN_TARGET → `summary.gross_margin_target_pct`]% target
+
+CHARTS — render all four:
+1. Monthly revenue vs target — line chart, 12 months Jan–Dec, two series (Actual / Target). Use the `monthly_revenue` array.
+2. Regional revenue — horizontal bar chart, [REGION_COUNT → count the `regions` array] regions, show attainment % on each bar.
+3. Product mix — donut chart, [PRODUCT_COUNT → count the `products` array] products by revenue share.
+4. Client risk table — columns: Rank, Client, Revenue, YoY Growth, NPS, Renewal Risk. Flag [AT_RISK_CLIENT → find the client where `renewal_risk` = "High"] with a red badge. All other clients show green.
+
+PIPELINE — one stat row below the charts:
+Q1 FY2025: [PIPELINE_QUALIFIED → `pipeline.total_qualified_pipeline`] qualified vs [PIPELINE_TARGET → `pipeline.target`] target = [COVERAGE → calculate qualified ÷ target, round to 2 decimals]x coverage.
+
+All chart data inline as JS objects — no fetch calls, no external data files. One complete self-contained .html file.
 
 ## checkpoint
 
-Before moving on:
-- You have the stack card copied and ready to paste
-- You know what Tailwind, Alpine.js, and ApexCharts each do
-- You have the colour palette noted
-- You understand why no React or TypeScript here
+Before moving to Craft, confirm:
+- Every [PLACEHOLDER] replaced with a real value from the data file
+- STACK block is unchanged
+- Design colors are unchanged
+- You have named the at-risk client
+- The prompt references screenshot_1.png and screenshot_2.png for visual guidance

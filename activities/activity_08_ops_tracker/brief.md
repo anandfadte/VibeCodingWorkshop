@@ -1,56 +1,87 @@
 # Stack
-> A project portfolio dashboard must communicate RAG status before the viewer reads a single word — the first 3 seconds of opening this file determine whether Priya Nair walks into her leadership review confident or uncertain.
+> Read the brief. Review the design standard. Fill in the prompt placeholders. Exit in 5 minutes with a complete, ready-to-fire prompt.
 
 ## scenario
 
-You have a project portfolio file for Genpact's APAC Client Delivery team. The audience is Priya Nair, VP Client Delivery, preparing for a Monday morning leadership review. There are 10 projects. Three are Red. $8.2M is at risk. Two projects need to be escalated today.
+**Portfolio:** Genpact Client Delivery — APAC Portfolio
+**Deliverable:** Single-file interactive HTML project portfolio tracker
+**Audience:** Priya Nair, VP Client Delivery, and the APAC ExCo at a monthly delivery review
+**Your data file:** `project_tracker.json`
+**Design reference:** `screenshot_1.png` and `screenshot_2.png` in your folder
 
-Before you write a single prompt, pick the stack that makes it impossible to miss a Red project — even when scrolling fast.
+You are not building anything in this phase. You are setting up: reviewing what you have, understanding the quality bar, and filling in the prompt template below.
 
 ## context
 
-For an operational portfolio dashboard, the primary design job is status visibility. A Red project card must look physically different from an Amber one — different background, different border, different weight. Tailwind and Alpine.js handle this directly.
+Open `screenshot_1.png` and `screenshot_2.png` from your folder. **Treat these like a Figma handoff** — in professional practice, a designer builds the visual first, then hands it to the developer (or AI) and says "build this." That is exactly what you are doing now. Your final tracker must meet this quality before presenting to the VP.
 
-**Tailwind CSS** — conditional colour classes make RAG-coloured project cards straightforward: a Red card gets `border-red-500 bg-red-50`, a Green card gets `border-green-500 bg-green-50`. No custom CSS needed.
+Four non-negotiable rules extracted from the standard:
 
-**Alpine.js** — adds the filter buttons (All / Red / Amber / Green) and the expandable project detail panel. These are the two interactions that make the dashboard useful in a live meeting — filter to Red, click to expand, see the risk. All done with Alpine's `x-data` and `x-show`.
+**1. Color** — Primary `#0D9488` (teal) for page chrome and scorecard headings. RAG colors are hard-coded and must not be softened: Red `#DC2626`, Amber `#D97706`, Green `#16A34A`. A Red project must look unmistakably critical — not orange, not dark red.
 
-**ApexCharts** — optional for this activity but useful for a RAG summary donut chart in the header or a budget consumption bar chart across the 10 projects.
+**2. Typography** — Inter font throughout (already in the prompt below). `font-weight: 800` for the $8.2M revenue-at-risk figure — this is the number Priya will act on. `font-weight: 600` for project names and budget-consumed percentages. `font-weight: 400` for descriptions and risk text.
+
+**3. Layout** — Summary scorecard (4 tiles) at the top. Red projects as dedicated escalation cards directly below, before the full project table. Full project table with RAG chips and budget bars below that. The $8.2M figure and both Red projects must be visible without scrolling.
+
+**4. Interactivity** — An Alpine.js status filter: All / Red / Amber / Green. Clicking Red shows only Red projects. Budget consumption shown as a horizontal progress bar within each project row — red bar if > 85% consumed. This is what makes the tracker useful in a live review.
 
 ## do_this
 
-Review the stack card below and copy it. You will paste it into your build prompt in Phase 2 as your **stack declaration**.
+Open `project_tracker.json`. Read it for 3 minutes.
 
-This activity uses a teal palette for the UI chrome, with hard-coded RAG colours that must not be softened or blended. These are operational status colours — they carry meaning.
+Find each `[PLACEHOLDER]` in the sample prompt below and replace it with the real value from the data file. Each placeholder tells you exactly which field to look in. Do not change the STACK block, the RAG thresholds, or the layout structure — only fill in the placeholders.
 
 ## prompt
 
-STACK — use these exact CDN links, no others:
+Build a single-file HTML project portfolio tracker for the Genpact APAC Client Delivery portfolio review.
 
+STACK — do not change these:
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.54.0/dist/apexcharts.min.js"></script>
 
-COLOUR PALETTE:
-- Primary: #0D9488
-- Background: #F0FDFA
-- Surface: #FFFFFF
-- Border: #CCFBF1
-- Text primary: #1E293B
-- Text muted: #64748B
-- RAG Red: #DC2626 (border #FCA5A5, background #FEF2F2)
-- RAG Amber: #D97706 (border #FCD34D, background #FFFBEB)
-- RAG Green: #16A34A (border #86EFAC, background #F0FDF4)
+DESIGN: Inter font. Primary #0D9488. Background #F0FDFB. White card surfaces. Text #1E293B. Refer to screenshot_1.png and screenshot_2.png for layout and visual standard.
 
-## tip
+RAG COLORS — do not change these:
+- Red: background #FEF2F2, border #FCA5A5, chip text #DC2626, budget bar #DC2626
+- Amber: background #FFFBEB, border #FCD34D, chip text #D97706, budget bar #D97706
+- Green: background #F0FDF4, border #86EFAC, chip text #16A34A, budget bar #16A34A
 
-The RAG colours are non-negotiable. If you let the AI pick them, it will use CSS class names like `bg-red-100` without specifying the exact border and background combination needed. Specifying all three values per status (text, border, background) in your build prompt is what makes the cards render correctly the first time.
+SUMMARY SCORECARD — 4 tiles, top of page:
+- Portfolio health: [GREEN_COUNT → `summary.on_track_green`] Green / [AMBER_COUNT → `summary.at_risk_amber`] Amber / [RED_COUNT → `summary.critical_red`] Red of [TOTAL_PROJECTS → `summary.total_projects`] projects — show on-track % [ON_TRACK_PCT → `summary.on_track_pct`]%
+- Revenue at risk: $[REVENUE_AT_RISK → `summary.revenue_at_risk_usd`] — label "Needs immediate action" — make this the visual hero tile
+- Total portfolio value: $[TOTAL_VALUE → `summary.total_contracted_value_usd`]
+- Q1 2025 deadline: [Q1_PROJECTS → `summary.projects_due_q1_2025`] projects due — flag this tile amber
+
+ESCALATION CARDS — appear directly below the scorecard, before the full table:
+Show only Red projects as dedicated cards. Each card: project name (large, 600 weight), client name, owner name, budget consumed % (progress bar, red if > 85%), missed milestone (most recent failed milestone), top risk (full text), client satisfaction score.
+
+- [P003_NAME → `projects[2].name`] (Client: [P003_CLIENT → `projects[2].client`], Owner: [P003_OWNER → `projects[2].owner`])
+  Budget: [P003_BUDGET → `projects[2].budget_consumed_pct`]% consumed
+  Missed milestone: [P003_MILESTONE → `projects[2].milestones[3].name`] — [P003_MILESTONE_STATUS → `projects[2].milestones[3].status`]
+  Risk: [P003_RISK → `projects[2].top_risk`]
+  Satisfaction: [P003_SAT → `projects[2].client_satisfaction`]/5
+
+- [P010_NAME → `projects[9].name`] (Client: [P010_CLIENT → `projects[9].client`], Owner: [P010_OWNER → `projects[9].owner`])
+  Budget: [P010_BUDGET → `projects[9].budget_consumed_pct`]% consumed
+  Missed milestone: [P010_MILESTONE → `projects[9].milestones[3].name`] — [P010_MILESTONE_STATUS → `projects[9].milestones[3].status`]
+  Risk: [P010_RISK → `projects[9].top_risk`]
+  Satisfaction: [P010_SAT → `projects[9].client_satisfaction`]/5
+
+PROJECT TABLE — all projects, one row per project:
+Columns: ID | Project Name | Client | Owner | Status chip | Phase | Budget % (bar) | Contract Value | Top Risk (truncated, expand on click)
+Show all projects from the data file. Apply RAG background color to entire row. Budget bar turns red if > 85%.
+
+INTERACTIVITY: Alpine.js filter buttons: All | Red | Amber | Green. Clicking a filter shows only projects with that status.
+
+All data inline as JS objects. One complete self-contained .html file. No fetch calls.
 
 ## checkpoint
 
-Before moving on:
-- You have the stack card with the full RAG colour definitions copied
-- You understand that RAG colour clarity is the primary design goal here
-- You understand Alpine.js will handle the filter buttons and expandable detail panels
-- You are ready to read the portfolio data file in Phase 2
+Before moving to Craft, confirm:
+- Every [PLACEHOLDER] replaced with a real value from the data file
+- STACK block and RAG colors are unchanged
+- The $[REVENUE_AT_RISK] tile is the visual hero in the scorecard
+- Both P003 and P010 appear as dedicated escalation cards directly below the scorecard
+- Budget bars for P003 (87%) and P010 (94%) are both rendering in red

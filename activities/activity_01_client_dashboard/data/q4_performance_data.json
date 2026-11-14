@@ -1,0 +1,100 @@
+{
+  "company": "Meridian Retail Group",
+  "report_period": "Q4 FY2024 (Oct – Dec 2024)",
+  "prepared_for": "Quarterly Business Review — Leadership Team",
+  "currency": "USD",
+
+  "summary": {
+    "total_revenue": 42800000,
+    "revenue_target": 45000000,
+    "revenue_attainment_pct": 95.1,
+    "yoy_growth_pct": 8.3,
+    "total_active_clients": 847,
+    "new_clients_q4": 31,
+    "churned_clients_q4": 8,
+    "net_promoter_score": 67,
+    "nps_target": 65,
+    "gross_margin_pct": 38.4,
+    "gross_margin_target_pct": 40.0,
+    "operating_cost_usd": 26368000
+  },
+
+  "monthly_revenue": [
+    { "month": "Jan", "actual": 3200000, "target": 3500000 },
+    { "month": "Feb", "actual": 3100000, "target": 3500000 },
+    { "month": "Mar", "actual": 3600000, "target": 3700000 },
+    { "month": "Apr", "actual": 3400000, "target": 3700000 },
+    { "month": "May", "actual": 3500000, "target": 3700000 },
+    { "month": "Jun", "actual": 3800000, "target": 3800000 },
+    { "month": "Jul", "actual": 3700000, "target": 3800000 },
+    { "month": "Aug", "actual": 4000000, "target": 3900000 },
+    { "month": "Sep", "actual": 4100000, "target": 3900000 },
+    { "month": "Oct", "actual": 4300000, "target": 4500000 },
+    { "month": "Nov", "actual": 4700000, "target": 4800000 },
+    { "month": "Dec", "actual": 4800000, "target": 5000000 }
+  ],
+
+  "regions": [
+    {
+      "name": "North America",
+      "revenue": 18200000,
+      "target": 19000000,
+      "attainment_pct": 95.8,
+      "clients": 312,
+      "yoy_growth_pct": 11.2
+    },
+    {
+      "name": "Europe",
+      "revenue": 12400000,
+      "target": 13000000,
+      "attainment_pct": 95.4,
+      "clients": 228,
+      "yoy_growth_pct": 6.8
+    },
+    {
+      "name": "Asia Pacific",
+      "revenue": 8600000,
+      "target": 9000000,
+      "attainment_pct": 95.6,
+      "clients": 194,
+      "yoy_growth_pct": 14.5
+    },
+    {
+      "name": "Middle East & Africa",
+      "revenue": 3600000,
+      "target": 4000000,
+      "attainment_pct": 90.0,
+      "clients": 113,
+      "yoy_growth_pct": 3.2
+    }
+  ],
+
+  "product_mix": [
+    { "product": "Enterprise Analytics", "revenue": 15400000, "share_pct": 36.0, "yoy_growth_pct": 12.3 },
+    { "product": "Managed Services", "revenue": 12800000, "share_pct": 29.9, "yoy_growth_pct": 7.1 },
+    { "product": "Professional Services", "revenue": 8600000, "share_pct": 20.1, "yoy_growth_pct": 5.9 },
+    { "product": "Platform Licences", "revenue": 6000000, "share_pct": 14.0, "yoy_growth_pct": 2.8 }
+  ],
+
+  "top_clients": [
+    { "rank": 1, "name": "Apex Global Holdings", "segment": "Enterprise", "revenue": 4200000, "yoy_growth_pct": 18.0, "nps": 82, "renewal_risk": "Low" },
+    { "rank": 2, "name": "Pacific Ventures Corp", "segment": "Enterprise", "revenue": 3800000, "yoy_growth_pct": 9.5, "nps": 74, "renewal_risk": "Low" },
+    { "rank": 3, "name": "Nordic Retail Partners", "segment": "Mid-Market", "revenue": 2900000, "yoy_growth_pct": 22.1, "nps": 79, "renewal_risk": "Low" },
+    { "rank": 4, "name": "Sunrise Distribution", "segment": "Enterprise", "revenue": 2600000, "yoy_growth_pct": -3.2, "nps": 51, "renewal_risk": "High" },
+    { "rank": 5, "name": "Kestrel Logistics", "segment": "Mid-Market", "revenue": 2100000, "yoy_growth_pct": 6.7, "nps": 68, "renewal_risk": "Medium" },
+    { "rank": 6, "name": "Calloway Industries", "segment": "Enterprise", "revenue": 1980000, "yoy_growth_pct": 14.3, "nps": 71, "renewal_risk": "Low" },
+    { "rank": 7, "name": "Vantage Group", "segment": "Mid-Market", "revenue": 1750000, "yoy_growth_pct": 5.1, "nps": 63, "renewal_risk": "Medium" },
+    { "rank": 8, "name": "Harvest Capital", "segment": "SMB", "revenue": 1420000, "yoy_growth_pct": 31.5, "nps": 85, "renewal_risk": "Low" },
+    { "rank": 9, "name": "BlueStar Retail", "segment": "SMB", "revenue": 1300000, "yoy_growth_pct": 8.9, "nps": 77, "renewal_risk": "Low" },
+    { "rank": 10, "name": "Meridian Sub-brand A", "segment": "Internal", "revenue": 1180000, "yoy_growth_pct": -1.5, "nps": 58, "renewal_risk": "Medium" }
+  ],
+
+  "pipeline": {
+    "q1_fy2025_target": 48000000,
+    "qualified_pipeline_value": 61200000,
+    "pipeline_coverage_ratio": 1.28,
+    "deals_in_final_stage": 14,
+    "avg_deal_size": 420000,
+    "avg_sales_cycle_days": 68
+  }
+}

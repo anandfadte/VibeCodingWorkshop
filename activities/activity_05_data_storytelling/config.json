@@ -1,0 +1,29 @@
+{
+  "id": "activity_05",
+  "slug": "campaign-performance-report",
+  "title": "Campaign Performance Report",
+  "subtitle": "Transform raw campaign data into a visual story that drives the Q4 budget decision.",
+  "domain": "Marketing & Growth",
+  "duration_minutes": 30,
+  "ai_tool": "Any AI tool (Claude, Copilot, Cursor, Gemini)",
+  "difficulty": "Beginner",
+  "phases": 4,
+  "plugins": [],
+  "skill_chain": [],
+  "data_files": [
+    {
+      "filename": "campaign_analysis.json",
+      "display_name": "Q3 FY2024 Campaign Analysis",
+      "type": "json",
+      "role": "Genpact Enterprise Intelligence Suite launch — $1.72M spend across 6 channels, 1,847 leads, 67 opportunities vs 150 target (44.7% attainment), cost-per-opportunity by channel, monthly trend, audience segment breakdown"
+    }
+  ],
+  "learning_objectives": [
+    "Choose a stack that makes channel comparison data immediately scannable — the best and worst performers must be unmissable",
+    "Read a campaign dataset and find the non-obvious insight before building — not just the headline miss",
+    "Validate that your prompt names the worst channel ($270k per opp) and the best ($12,917) explicitly before firing",
+    "Build a campaign postmortem that gives leadership a clear Q4 budget reallocation decision",
+    "Deliver a decision-ready report that replaces a 20-slide deck with one interactive HTML file"
+  ],
+  "deliverable": "Single-file interactive HTML campaign performance report"
+}

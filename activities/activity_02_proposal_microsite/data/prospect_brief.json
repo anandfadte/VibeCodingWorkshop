@@ -1,0 +1,136 @@
+{
+  "company_profile": {
+    "name": "Calloway Industries",
+    "industry": "Industrial Manufacturing & Distribution",
+    "annual_revenue_usd": 2400000000,
+    "employees": 8200,
+    "founded": 1987,
+    "headquarters": "Atlanta, GA",
+    "offices": ["Atlanta", "Houston", "Chicago", "Frankfurt", "Singapore"],
+    "description": "Mid-market industrial conglomerate with manufacturing, distribution, and after-market services divisions"
+  },
+  "stakeholders": {
+    "economic_buyer": {
+      "name": "Robert Chen",
+      "title": "Chief Procurement Officer",
+      "tenure_years": 4,
+      "priority": "Cost reduction without operational disruption",
+      "concern": "Previous transformation failed — vendor over-promised, under-delivered"
+    },
+    "champion": {
+      "name": "Sarah Whitfield",
+      "title": "VP Operations",
+      "tenure_years": 7,
+      "priority": "Team capacity — her team spends 60% of time on exception handling"
+    },
+    "technical_evaluator": {
+      "name": "Marcus Webb",
+      "title": "Head of IT & Digital",
+      "priority": "Zero disruption to SAP S/4HANA and minimal new tooling"
+    }
+  },
+  "current_state_pain_points": [
+    {
+      "area": "Invoice Processing",
+      "problem": "14-day average cycle vs 5-day industry benchmark",
+      "root_cause": "Manual data entry for 68% of invoices — no OCR, no automation",
+      "annual_cost_impact_usd": 3200000
+    },
+    {
+      "area": "Supplier Management",
+      "problem": "1,247 active suppliers, 60% managed via manual email processes",
+      "root_cause": "No supplier portal — onboarding takes 23 days vs 7-day benchmark",
+      "annual_cost_impact_usd": 1800000
+    },
+    {
+      "area": "Exception Handling",
+      "problem": "23% of invoices require manual exception handling (benchmark: 8%)",
+      "root_cause": "Inconsistent PO matching rules, legacy ERP data quality issues",
+      "annual_cost_impact_usd": 2400000
+    },
+    {
+      "area": "Compliance & Audit",
+      "problem": "Failed 2 of 4 recent regulatory audits due to documentation gaps",
+      "root_cause": "No automated audit trail — documentation assembled manually per audit",
+      "annual_cost_impact_usd": 950000
+    }
+  ],
+  "total_addressable_cost_usd": 8350000,
+  "proposed_solution": {
+    "name": "Genpact Intelligent Finance Operations",
+    "tagline": "AP automation and supplier intelligence, built on your existing SAP",
+    "implementation_months": 6,
+    "components": [
+      {
+        "name": "AI Invoice Processing",
+        "description": "Automated extraction, 3-way matching, and intelligent routing — zero manual keying",
+        "outcome": "Cycle time: 14 days → 4 days"
+      },
+      {
+        "name": "Supplier Intelligence Portal",
+        "description": "Self-service supplier onboarding, status tracking, and dispute resolution",
+        "outcome": "Onboarding: 23 days → 6 days. Supplier queries reduced 74%"
+      },
+      {
+        "name": "Exception Intelligence Engine",
+        "description": "ML model predicts and auto-routes exceptions before they cause delay",
+        "outcome": "Exception rate: 23% → 5%. Built on 47 manufacturing client datasets"
+      },
+      {
+        "name": "Compliance Automation",
+        "description": "Real-time audit trail, automated regulatory reporting, one-click audit pack",
+        "outcome": "100% audit-ready — no manual assembly"
+      }
+    ]
+  },
+  "investment_and_roi": {
+    "year_1_investment_usd": 2100000,
+    "year_2_investment_usd": 1600000,
+    "year_3_investment_usd": 1600000,
+    "total_3yr_investment_usd": 5300000,
+    "projected_savings_year_1_usd": 3100000,
+    "projected_savings_3yr_usd": 11200000,
+    "net_benefit_3yr_usd": 5900000,
+    "roi_year_1_pct": 48,
+    "roi_3yr_pct": 215,
+    "payback_months": 14
+  },
+  "case_studies": [
+    {
+      "client_name": "Nordic Manufacturing Group",
+      "industry": "Industrial Manufacturing",
+      "size": "$1.8B revenue, 6,400 employees",
+      "challenge": "16-day invoice cycle, 1,800 suppliers, 28% exception rate",
+      "solution": "Genpact AI Invoice Processing + Supplier Portal",
+      "result_cycle_days": 4,
+      "result_savings_usd": 4200000,
+      "result_exception_rate_pct": 6,
+      "implementation_months": 5,
+      "quote": "We went live in 5 months and hit payback in month 11. Genpact delivered exactly what they promised."
+    },
+    {
+      "client_name": "Pacific Distribution Co",
+      "industry": "Distribution & Logistics",
+      "size": "$890M revenue, 3,200 employees",
+      "challenge": "31% exception rate, 3 consecutive failed audits",
+      "solution": "Exception Intelligence Engine + Compliance Automation",
+      "result_exception_rate_pct": 6,
+      "result_audit_pass_rate_pct": 100,
+      "result_savings_usd": 2800000,
+      "implementation_months": 7,
+      "quote": "First audit after go-live: clean pass. No manual pack assembly. The documentation just existed."
+    }
+  ],
+  "competitive_context": {
+    "shortlisted_vendors": ["Genpact", "EXL Service", "WNS Global"],
+    "genpact_differentiators": [
+      "Only shortlisted vendor with live SAP S/4HANA integration at Calloway's exact version (2023 FPS01)",
+      "47 active manufacturing clients — exception prediction model trained on this sector",
+      "Atlanta-based delivery team: 15-minute drive from Calloway HQ for on-site support",
+      "Exception prediction accuracy: 93% (vs 71% industry average)"
+    ],
+    "decision_timeline": "Vendor selected by December 15, 2024",
+    "go_live_target": "July 1, 2025",
+    "contract_term_years": 3
+  }
+}

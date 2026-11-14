@@ -1,0 +1,29 @@
+{
+  "id": "activity_03",
+  "slug": "hr-analytics-dashboard",
+  "title": "HR Analytics Dashboard",
+  "subtitle": "Build an executive people-health dashboard from raw HR metrics in under 30 minutes.",
+  "domain": "Human Resources",
+  "duration_minutes": 30,
+  "ai_tool": "Any AI tool (Claude, Copilot, Cursor, Gemini)",
+  "difficulty": "Beginner",
+  "phases": 4,
+  "plugins": [],
+  "skill_chain": [],
+  "data_files": [
+    {
+      "filename": "hr_metrics.json",
+      "display_name": "Genpact APAC HR Metrics — Q4 FY2024",
+      "type": "json",
+      "role": "Genpact APAC BU — 2,847 headcount, 7 departments, 16.3% attrition (benchmark 13.5%), hiring pipeline, engagement scores (68 vs 72 benchmark), $12.8M attrition cost"
+    }
+  ],
+  "learning_objectives": [
+    "Choose a stack that communicates people data with clarity — RAG indicators and benchmark comparisons must read at a glance",
+    "Read an HR metrics file and identify the highest-risk signals before writing a single prompt",
+    "Validate your prompt to ensure every critical metric (attrition, engagement, pipeline) is explicitly specified",
+    "Build a people-health dashboard that turns dense HR data into action items for ExCo",
+    "Deliver a board-ready HR file a CHRO can present without needing Excel"
+  ],
+  "deliverable": "Single-file interactive HTML HR analytics dashboard"
+}

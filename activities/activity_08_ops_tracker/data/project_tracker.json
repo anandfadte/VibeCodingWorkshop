@@ -1,0 +1,241 @@
+{
+  "portfolio": "Genpact Client Delivery — APAC Portfolio",
+  "reporting_date": "2024-12-01",
+  "portfolio_owner": "Priya Nair, VP Client Delivery",
+  "currency": "USD",
+
+  "summary": {
+    "total_projects": 22,
+    "on_track_green": 12,
+    "at_risk_amber": 7,
+    "critical_red": 3,
+    "on_track_pct": 54.5,
+    "total_contracted_value_usd": 48600000,
+    "revenue_at_risk_usd": 8200000,
+    "total_headcount_deployed": 847,
+    "projects_due_q1_2025": 6
+  },
+
+  "projects": [
+    {
+      "id": "P001",
+      "name": "Calloway AP Automation",
+      "client": "Calloway Industries",
+      "domain": "Finance Operations",
+      "owner": "Arjun Mehta",
+      "status": "Green",
+      "phase": "Implementation",
+      "start_date": "2024-07-01",
+      "planned_end_date": "2025-01-31",
+      "contract_value_usd": 2100000,
+      "budget_consumed_pct": 48,
+      "headcount": 18,
+      "milestones": [
+        { "name": "Discovery Complete", "due": "2024-08-15", "status": "Done" },
+        { "name": "SAP Integration Live", "due": "2024-10-30", "status": "Done" },
+        { "name": "UAT Sign-off", "due": "2024-12-15", "status": "On Track" },
+        { "name": "Go Live", "due": "2025-01-31", "status": "On Track" }
+      ],
+      "top_risk": "SAP patch scheduled Dec 20 may delay UAT by 1 week",
+      "client_satisfaction": 4.2
+    },
+    {
+      "id": "P002",
+      "name": "Pacific Ventures Data Platform",
+      "client": "Pacific Ventures Corp",
+      "domain": "Technology & Digital",
+      "owner": "Mei Lin",
+      "status": "Amber",
+      "phase": "Design",
+      "start_date": "2024-09-01",
+      "planned_end_date": "2025-04-30",
+      "contract_value_usd": 3800000,
+      "budget_consumed_pct": 22,
+      "headcount": 31,
+      "milestones": [
+        { "name": "Kick-off", "due": "2024-09-15", "status": "Done" },
+        { "name": "Data Architecture Approved", "due": "2024-11-01", "status": "Delayed — 3 weeks" },
+        { "name": "Build Phase Start", "due": "2024-12-01", "status": "At Risk" },
+        { "name": "Beta Launch", "due": "2025-03-31", "status": "At Risk" }
+      ],
+      "top_risk": "Client stakeholder alignment delayed architecture sign-off by 3 weeks — cascading to build start",
+      "client_satisfaction": 3.6
+    },
+    {
+      "id": "P003",
+      "name": "Sunrise Distribution Procurement Transform",
+      "client": "Sunrise Distribution",
+      "domain": "Procurement Operations",
+      "owner": "Daniel Ojo",
+      "status": "Red",
+      "phase": "Implementation",
+      "start_date": "2024-04-01",
+      "planned_end_date": "2024-11-30",
+      "contract_value_usd": 2600000,
+      "budget_consumed_pct": 87,
+      "headcount": 24,
+      "milestones": [
+        { "name": "Process Design", "due": "2024-06-30", "status": "Done" },
+        { "name": "System Config", "due": "2024-09-30", "status": "Done — 3 weeks late" },
+        { "name": "UAT", "due": "2024-11-15", "status": "Failed — rework required" },
+        { "name": "Go Live", "due": "2024-11-30", "status": "Missed — rescheduling" }
+      ],
+      "top_risk": "UAT failed due to data quality issues in legacy system. Go-live missed. Client is considering penalty clause. Needs escalation.",
+      "client_satisfaction": 2.1
+    },
+    {
+      "id": "P004",
+      "name": "Nordic Retail Analytics Rollout",
+      "client": "Nordic Retail Partners",
+      "domain": "Analytics & Insights",
+      "owner": "Sofia Andersen",
+      "status": "Green",
+      "phase": "Rollout",
+      "start_date": "2024-05-01",
+      "planned_end_date": "2025-02-28",
+      "contract_value_usd": 2900000,
+      "budget_consumed_pct": 61,
+      "headcount": 22,
+      "milestones": [
+        { "name": "Pilot (2 markets)", "due": "2024-08-31", "status": "Done" },
+        { "name": "Rollout Phase 1 (5 markets)", "due": "2024-11-30", "status": "Done" },
+        { "name": "Rollout Phase 2 (12 markets)", "due": "2025-01-31", "status": "On Track" },
+        { "name": "Full Production", "due": "2025-02-28", "status": "On Track" }
+      ],
+      "top_risk": "Phase 2 rollout spans Chinese New Year period — 2-week buffer built in",
+      "client_satisfaction": 4.7
+    },
+    {
+      "id": "P005",
+      "name": "Kestrel Logistics HR Transformation",
+      "client": "Kestrel Logistics",
+      "domain": "Human Resources",
+      "owner": "Priya Sharma",
+      "status": "Amber",
+      "phase": "Implementation",
+      "start_date": "2024-06-15",
+      "planned_end_date": "2025-03-31",
+      "contract_value_usd": 2100000,
+      "budget_consumed_pct": 54,
+      "headcount": 19,
+      "milestones": [
+        { "name": "Process Mapping", "due": "2024-08-31", "status": "Done" },
+        { "name": "HRIS Configuration", "due": "2024-11-15", "status": "Done — 1 week late" },
+        { "name": "Integration Testing", "due": "2024-12-20", "status": "At Risk" },
+        { "name": "Go Live", "due": "2025-01-31", "status": "At Risk" }
+      ],
+      "top_risk": "Integration testing backlog — 3 of 11 integration points incomplete",
+      "client_satisfaction": 3.9
+    },
+    {
+      "id": "P006",
+      "name": "Calloway CX Intelligence",
+      "client": "Calloway Industries",
+      "domain": "Customer Experience",
+      "owner": "James Okafor",
+      "status": "Green",
+      "phase": "Discovery",
+      "start_date": "2024-10-01",
+      "planned_end_date": "2025-06-30",
+      "contract_value_usd": 1980000,
+      "budget_consumed_pct": 12,
+      "headcount": 11,
+      "milestones": [
+        { "name": "Kick-off", "due": "2024-10-15", "status": "Done" },
+        { "name": "Stakeholder Interviews", "due": "2024-12-15", "status": "On Track" },
+        { "name": "Current-State Assessment", "due": "2025-01-31", "status": "Planned" },
+        { "name": "Roadmap Approval", "due": "2025-02-28", "status": "Planned" }
+      ],
+      "top_risk": "Key client sponsor on parental leave — temporary replacement lacks authority",
+      "client_satisfaction": 4.0
+    },
+    {
+      "id": "P007",
+      "name": "Vantage Group Finance Shared Services",
+      "client": "Vantage Group",
+      "domain": "Finance Operations",
+      "owner": "Laura Chen",
+      "status": "Amber",
+      "phase": "Transition",
+      "start_date": "2024-03-01",
+      "planned_end_date": "2024-12-31",
+      "contract_value_usd": 1750000,
+      "budget_consumed_pct": 79,
+      "headcount": 28,
+      "milestones": [
+        { "name": "Transition Plan Approved", "due": "2024-04-30", "status": "Done" },
+        { "name": "Team Onboarded", "due": "2024-07-31", "status": "Done" },
+        { "name": "Hypercare Complete", "due": "2024-11-30", "status": "Done — 2 weeks late" },
+        { "name": "Steady State Handover", "due": "2024-12-31", "status": "At Risk" }
+      ],
+      "top_risk": "3 key SMEs leaving year-end. Knowledge transfer documentation incomplete.",
+      "client_satisfaction": 3.4
+    },
+    {
+      "id": "P008",
+      "name": "Harvest Capital AML & Compliance",
+      "client": "Harvest Capital",
+      "domain": "Risk & Compliance",
+      "owner": "Amir Hassan",
+      "status": "Green",
+      "phase": "Steady State",
+      "start_date": "2024-01-15",
+      "planned_end_date": "2026-01-14",
+      "contract_value_usd": 1420000,
+      "budget_consumed_pct": 46,
+      "headcount": 16,
+      "milestones": [
+        { "name": "Go Live", "due": "2024-04-01", "status": "Done — on time" },
+        { "name": "Q2 Audit Pass", "due": "2024-07-31", "status": "Done" },
+        { "name": "Q3 Audit Pass", "due": "2024-10-31", "status": "Done" },
+        { "name": "Annual Review", "due": "2025-01-31", "status": "On Track" }
+      ],
+      "top_risk": "Regulatory change (AML Directive 6) requires scope extension — SOW amendment in progress",
+      "client_satisfaction": 4.6
+    },
+    {
+      "id": "P009",
+      "name": "BlueStar Retail Supply Chain",
+      "client": "BlueStar Retail",
+      "domain": "Supply Chain",
+      "owner": "Wei Zhang",
+      "status": "Green",
+      "phase": "Implementation",
+      "start_date": "2024-08-01",
+      "planned_end_date": "2025-05-31",
+      "contract_value_usd": 1300000,
+      "budget_consumed_pct": 34,
+      "headcount": 13,
+      "milestones": [
+        { "name": "Process Design", "due": "2024-09-30", "status": "Done" },
+        { "name": "ERP Configuration", "due": "2024-12-15", "status": "On Track" },
+        { "name": "Pilot Warehouse", "due": "2025-02-28", "status": "Planned" },
+        { "name": "Full Rollout", "due": "2025-05-31", "status": "Planned" }
+      ],
+      "top_risk": "Dependency on client IT team for ERP access — 2-week SLA response time causing delays",
+      "client_satisfaction": 4.1
+    },
+    {
+      "id": "P010",
+      "name": "Apex Global Digital Transformation",
+      "client": "Apex Global Holdings",
+      "domain": "Technology & Digital",
+      "owner": "Rachel Kim",
+      "status": "Red",
+      "phase": "Implementation",
+      "start_date": "2024-02-01",
+      "planned_end_date": "2024-10-31",
+      "contract_value_usd": 4200000,
+      "budget_consumed_pct": 94,
+      "headcount": 48,
+      "milestones": [
+        { "name": "Discovery", "due": "2024-03-31", "status": "Done" },
+        { "name": "Build Phase 1", "due": "2024-06-30", "status": "Done — 4 weeks late" },
+        { "name": "Build Phase 2", "due": "2024-09-30", "status": "Delayed — in progress" },
+        { "name": "Go Live", "due": "2024-10-31", "status": "Missed — TBD" }
+      ],
+      "top_risk": "CRITICAL: 94% budget consumed with 15% of scope incomplete. Scope creep not formally managed. Change request submitted — awaiting client approval for $420k additional budget.",
+      "client_satisfaction": 2.8
+    }
+  ]
+}

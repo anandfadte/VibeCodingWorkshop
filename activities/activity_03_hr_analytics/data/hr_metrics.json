@@ -1,0 +1,119 @@
+{
+  "organisation": "Genpact APAC Business Unit",
+  "reporting_period": "FY2024 Q4 (Oct – Dec 2024)",
+  "report_prepared_for": "ExCo People Health Review — January 2025 Offsite",
+  "currency": "USD",
+
+  "headcount_summary": {
+    "total_headcount": 2847,
+    "headcount_target": 3000,
+    "headcount_attainment_pct": 94.9,
+    "open_roles": 193,
+    "yoy_headcount_growth_pct": 6.2,
+    "contractor_count": 214,
+    "permanent_ratio_pct": 92.5
+  },
+
+  "headcount_by_department": [
+    { "department": "Client Delivery", "headcount": 1240, "target": 1300, "open_roles": 62 },
+    { "department": "Technology & Digital", "headcount": 487, "target": 520, "open_roles": 34 },
+    { "department": "Finance Operations", "headcount": 398, "target": 420, "open_roles": 23 },
+    { "department": "Sales & Business Development", "headcount": 186, "target": 200, "open_roles": 15 },
+    { "department": "Human Resources", "headcount": 143, "target": 150, "open_roles": 9 },
+    { "department": "Risk & Compliance", "headcount": 211, "target": 220, "open_roles": 11 },
+    { "department": "Support & Admin", "headcount": 182, "target": 190, "open_roles": 39 }
+  ],
+
+  "attrition": {
+    "ytd_voluntary_attrition_pct": 14.2,
+    "ytd_involuntary_attrition_pct": 2.1,
+    "ytd_total_attrition_pct": 16.3,
+    "industry_benchmark_pct": 13.5,
+    "attrition_vs_benchmark_delta": 2.8,
+    "top_exit_reason_1": "Compensation (38% of exits)",
+    "top_exit_reason_2": "Career growth opportunities (27% of exits)",
+    "top_exit_reason_3": "Manager relationship (19% of exits)",
+    "avg_tenure_at_exit_months": 22
+  },
+
+  "attrition_by_department": [
+    { "department": "Client Delivery", "attrition_pct": 18.4, "benchmark_pct": 13.5, "risk": "High" },
+    { "department": "Technology & Digital", "attrition_pct": 21.2, "benchmark_pct": 16.0, "risk": "High" },
+    { "department": "Finance Operations", "attrition_pct": 11.3, "benchmark_pct": 12.0, "risk": "Low" },
+    { "department": "Sales & Business Development", "attrition_pct": 14.8, "benchmark_pct": 15.0, "risk": "Medium" },
+    { "department": "Human Resources", "attrition_pct": 9.1, "benchmark_pct": 10.0, "risk": "Low" },
+    { "department": "Risk & Compliance", "attrition_pct": 10.7, "benchmark_pct": 11.0, "risk": "Low" },
+    { "department": "Support & Admin", "attrition_pct": 16.9, "benchmark_pct": 13.0, "risk": "High" }
+  ],
+
+  "quarterly_attrition_trend": [
+    { "quarter": "Q1 FY24", "attrition_pct": 3.8 },
+    { "quarter": "Q2 FY24", "attrition_pct": 4.1 },
+    { "quarter": "Q3 FY24", "attrition_pct": 4.7 },
+    { "quarter": "Q4 FY24", "attrition_pct": 3.7 }
+  ],
+
+  "hiring_pipeline": {
+    "open_roles_total": 193,
+    "applications_received_q4": 2847,
+    "applications_per_role": 14.7,
+    "phone_screens_q4": 612,
+    "interviews_q4": 318,
+    "offers_extended_q4": 141,
+    "offers_accepted_q4": 118,
+    "offer_acceptance_rate_pct": 83.7,
+    "avg_time_to_fill_days": 47,
+    "benchmark_time_to_fill_days": 35,
+    "new_hires_q4": 118,
+    "new_hires_30day_retention_pct": 94.1
+  },
+
+  "hiring_by_source_q4": [
+    { "source": "Employee Referral", "hires": 42, "share_pct": 35.6, "cost_per_hire_usd": 2800 },
+    { "source": "LinkedIn", "hires": 31, "share_pct": 26.3, "cost_per_hire_usd": 4200 },
+    { "source": "Job Boards", "hires": 24, "share_pct": 20.3, "cost_per_hire_usd": 3600 },
+    { "source": "Agency", "hires": 14, "share_pct": 11.9, "cost_per_hire_usd": 8900 },
+    { "source": "Direct Apply", "hires": 7, "share_pct": 5.9, "cost_per_hire_usd": 1200 }
+  ],
+
+  "engagement": {
+    "engagement_survey_date": "October 2024",
+    "participation_rate_pct": 78.3,
+    "overall_engagement_score": 68,
+    "benchmark_score": 72,
+    "eNPS": 24,
+    "eNPS_benchmark": 32,
+    "top_strengths": ["Team collaboration", "Client impact", "Learning opportunities"],
+    "top_concerns": ["Workload and burnout risk", "Compensation competitiveness", "Career progression clarity"]
+  },
+
+  "engagement_by_department": [
+    { "department": "Client Delivery", "score": 63, "benchmark": 72, "delta": -9 },
+    { "department": "Technology & Digital", "score": 71, "benchmark": 74, "delta": -3 },
+    { "department": "Finance Operations", "score": 76, "benchmark": 71, "delta": 5 },
+    { "department": "Sales & Business Development", "score": 74, "benchmark": 73, "delta": 1 },
+    { "department": "Human Resources", "score": 79, "benchmark": 72, "delta": 7 },
+    { "department": "Risk & Compliance", "score": 72, "benchmark": 70, "delta": 2 },
+    { "department": "Support & Admin", "score": 61, "benchmark": 69, "delta": -8 }
+  ],
+
+  "diversity_and_inclusion": {
+    "gender_female_pct": 44.2,
+    "gender_female_leadership_pct": 36.8,
+    "gender_female_target_pct": 50.0,
+    "nationality_diversity_count": 24,
+    "avg_age_years": 32.4,
+    "generation_z_pct": 28.1,
+    "millennial_pct": 51.4,
+    "gen_x_plus_pct": 20.5
+  },
+
+  "cost_per_employee_usd": {
+    "total_annual_cost": 182400000,
+    "avg_fully_loaded_cost_per_employee": 64100,
+    "attrition_cost_ytd": 12800000,
+    "attrition_cost_per_exit": 38200,
+    "recruitment_cost_ytd": 3200000,
+    "l_and_d_investment_ytd": 4100000
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "activity_01",
+  "slug": "client-dashboard-sprint",
+  "title": "Client Dashboard Sprint",
+  "subtitle": "Your data is in a file. The client QBR is tomorrow. Build a live interactive dashboard instead of sending another deck.",
+  "domain": "Data Visualization",
+  "duration_minutes": 30,
+  "ai_tool": "Any AI tool (Claude, Copilot, Cursor, Gemini)",
+  "difficulty": "Foundation",
+  "phases": 4,
+  "plugins": [],
+  "skill_chain": [],
+  "data_files": [
+    {
+      "filename": "q4_performance_data.json",
+      "display_name": "Q4 Performance Data — Meridian Retail Group",
+      "type": "json",
+      "role": "Meridian Retail Group Q4 FY2024 — $42.8M revenue, 4 regions, 10 clients, pipeline data"
+    }
+  ],
+  "learning_objectives": [
+    "Choose the right CDN stack before writing a single prompt — the stack shapes every decision that follows",
+    "Read a data file and translate what you see into specific prompt instructions, not generic descriptions",
+    "Validate your prompt in a neutral AI tool before firing in your build tool — a checked prompt produces 80% right output on the first attempt",
+    "Iterate with precision: name the exact issue, fix only that, keep everything else intact",
+    "Deliver a self-contained HTML dashboard that opens in any browser with no install, no server, no dependencies"
+  ],
+  "deliverable": "Single-file interactive HTML QBR dashboard"
+}

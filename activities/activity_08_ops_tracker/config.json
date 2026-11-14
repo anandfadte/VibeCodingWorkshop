@@ -1,0 +1,29 @@
+{
+  "id": "activity_08",
+  "slug": "project-portfolio-tracker",
+  "title": "Project Portfolio Tracker",
+  "subtitle": "Build a live-looking RAG portfolio dashboard that tells leadership exactly where to focus.",
+  "domain": "Client Delivery & Operations",
+  "duration_minutes": 30,
+  "ai_tool": "Any AI tool (Claude, Copilot, Cursor, Gemini)",
+  "difficulty": "Beginner",
+  "phases": 4,
+  "plugins": [],
+  "skill_chain": [],
+  "data_files": [
+    {
+      "filename": "project_tracker.json",
+      "display_name": "APAC Project Portfolio — Dec 2024",
+      "type": "json",
+      "role": "Genpact APAC Client Delivery — 10 projects shown, RAG status (Green/Amber/Red), $8.2M revenue at risk, budget consumed %, milestone status, top risks and client satisfaction scores"
+    }
+  ],
+  "learning_objectives": [
+    "Choose a stack that makes RAG status impossible to miss — a Red project must look Red before you read a word",
+    "Read a portfolio file and identify the two critical escalations before writing a single prompt",
+    "Validate that your prompt names P003 and P010 explicitly and specifies what the Red indicators must show",
+    "Build a portfolio tracker that lets a VP run a 15-minute leadership review without PowerPoint",
+    "Deliver a dashboard that surfaces $8.2M revenue at risk in the first 10 seconds of viewing"
+  ],
+  "deliverable": "Single-file interactive HTML project portfolio dashboard"
+}

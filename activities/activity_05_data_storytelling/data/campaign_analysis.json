@@ -1,0 +1,177 @@
+{
+  "campaign_name": "Genpact Enterprise Intelligence Suite — Market Launch",
+  "campaign_period": "Q3 FY2024 (1 Jul – 30 Sep 2024)",
+  "target_market": "Enterprise B2B — CFO and COO buyers at $500M+ revenue companies",
+  "campaign_objective": "Generate 150 qualified pipeline opportunities for the new Enterprise Intelligence Suite product",
+  "currency": "USD",
+
+  "budget_summary": {
+    "total_budget_usd": 1800000,
+    "total_spend_usd": 1724000,
+    "budget_utilisation_pct": 95.8,
+    "total_pipeline_generated_usd": 18600000,
+    "pipeline_roi_x": 10.8,
+    "total_leads_generated": 1847,
+    "qualified_leads_mql": 342,
+    "qualified_leads_sql": 89,
+    "mql_to_sql_rate_pct": 26.0,
+    "opportunities_created": 67,
+    "target_opportunities": 150,
+    "opportunity_attainment_pct": 44.7
+  },
+
+  "channels": [
+    {
+      "channel": "Paid Search (Google/Bing)",
+      "spend_usd": 480000,
+      "impressions": 2140000,
+      "clicks": 18200,
+      "ctr_pct": 0.85,
+      "leads": 612,
+      "mqls": 74,
+      "sqls": 18,
+      "opportunities": 14,
+      "pipeline_usd": 5200000,
+      "cpl_usd": 785,
+      "cost_per_opportunity_usd": 34286
+    },
+    {
+      "channel": "LinkedIn (Paid)",
+      "spend_usd": 390000,
+      "impressions": 4800000,
+      "clicks": 12400,
+      "ctr_pct": 0.26,
+      "leads": 284,
+      "mqls": 91,
+      "sqls": 28,
+      "opportunities": 22,
+      "pipeline_usd": 6800000,
+      "cpl_usd": 1373,
+      "cost_per_opportunity_usd": 17727
+    },
+    {
+      "channel": "Executive Roundtables (Events)",
+      "spend_usd": 310000,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr_pct": null,
+      "leads": 148,
+      "mqls": 94,
+      "sqls": 31,
+      "opportunities": 24,
+      "pipeline_usd": 5400000,
+      "cpl_usd": 2095,
+      "cost_per_opportunity_usd": 12917
+    },
+    {
+      "channel": "Content & SEO (Organic)",
+      "spend_usd": 180000,
+      "impressions": 890000,
+      "clicks": 31400,
+      "ctr_pct": 3.53,
+      "leads": 524,
+      "mqls": 48,
+      "sqls": 7,
+      "opportunities": 4,
+      "pipeline_usd": 800000,
+      "cpl_usd": 344,
+      "cost_per_opportunity_usd": 45000
+    },
+    {
+      "channel": "Email Nurture (Existing Database)",
+      "spend_usd": 94000,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr_pct": null,
+      "leads": 189,
+      "mqls": 29,
+      "sqls": 4,
+      "opportunities": 2,
+      "pipeline_usd": 400000,
+      "cpl_usd": 497,
+      "cost_per_opportunity_usd": 47000
+    },
+    {
+      "channel": "Webinars & Virtual Events",
+      "spend_usd": 270000,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr_pct": null,
+      "leads": 90,
+      "mqls": 6,
+      "sqls": 1,
+      "opportunities": 1,
+      "pipeline_usd": 0,
+      "cpl_usd": 3000,
+      "cost_per_opportunity_usd": 270000
+    }
+  ],
+
+  "audience_segments": [
+    {
+      "segment": "CFO / Finance Leadership",
+      "leads": 621,
+      "mqls": 148,
+      "sqls": 42,
+      "opportunities": 31,
+      "avg_deal_size_usd": 320000,
+      "conversion_rate_lead_to_opp_pct": 5.0
+    },
+    {
+      "segment": "COO / Operations Leadership",
+      "leads": 489,
+      "mqls": 112,
+      "sqls": 29,
+      "opportunities": 22,
+      "avg_deal_size_usd": 280000,
+      "conversion_rate_lead_to_opp_pct": 4.5
+    },
+    {
+      "segment": "CTO / Digital Leaders",
+      "leads": 418,
+      "mqls": 58,
+      "sqls": 12,
+      "opportunities": 8,
+      "avg_deal_size_usd": 210000,
+      "conversion_rate_lead_to_opp_pct": 1.9
+    },
+    {
+      "segment": "Procurement / Supply Chain",
+      "leads": 319,
+      "mqls": 24,
+      "sqls": 6,
+      "opportunities": 6,
+      "avg_deal_size_usd": 180000,
+      "conversion_rate_lead_to_opp_pct": 1.9
+    }
+  ],
+
+  "monthly_performance": [
+    { "month": "Jul 2024", "spend_usd": 520000, "leads": 498, "mqls": 86, "sqls": 22, "opportunities": 16, "pipeline_usd": 4200000 },
+    { "month": "Aug 2024", "spend_usd": 610000, "leads": 714, "mqls": 134, "sqls": 38, "opportunities": 28, "pipeline_usd": 7800000 },
+    { "month": "Sep 2024", "spend_usd": 594000, "leads": 635, "mqls": 122, "sqls": 29, "opportunities": 23, "pipeline_usd": 6600000 }
+  ],
+
+  "conversion_funnel": {
+    "total_impressions": 7830000,
+    "total_clicks_or_registrations": 62000,
+    "total_leads": 1847,
+    "total_mqls": 342,
+    "total_sqls": 89,
+    "total_opportunities": 67,
+    "click_to_lead_rate_pct": 2.98,
+    "lead_to_mql_rate_pct": 18.5,
+    "mql_to_sql_rate_pct": 26.0,
+    "sql_to_opportunity_rate_pct": 75.3
+  },
+
+  "key_findings": {
+    "best_performing_channel": "Executive Roundtables — lowest cost per opportunity ($12,917), highest SQL rate",
+    "worst_performing_channel": "Webinars — $270,000 per opportunity, 1 opp from $270k spend",
+    "biggest_opportunity_gap": "Target was 150 opportunities, achieved 67 — 55% gap despite 96% budget utilisation",
+    "best_audience": "CFO / Finance Leadership — 5.0% lead-to-opportunity rate vs 1.9% for tech buyers",
+    "recommendation_1": "Reallocate 60% of webinar budget to Executive Roundtables for Q4",
+    "recommendation_2": "Double down on CFO segment — highest conversion rate and largest deal size",
+    "recommendation_3": "Reduce paid search spend by 30% — high volume, low quality leads inflating MQL numbers"
+  }
+}

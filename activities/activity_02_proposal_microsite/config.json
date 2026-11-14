@@ -1,0 +1,29 @@
+{
+  "id": "activity_02",
+  "slug": "proposal-microsite",
+  "title": "Proposal Microsite",
+  "subtitle": "Turn a prospect brief into an interactive deal summary your client actually wants to read.",
+  "domain": "Sales & Business Development",
+  "duration_minutes": 30,
+  "ai_tool": "Any AI tool (Claude, Copilot, Cursor, Gemini)",
+  "difficulty": "Beginner",
+  "phases": 4,
+  "plugins": [],
+  "skill_chain": [],
+  "data_files": [
+    {
+      "filename": "prospect_brief.json",
+      "display_name": "Calloway Industries Prospect Brief",
+      "type": "json",
+      "role": "Calloway Industries — company profile, stakeholder map, 4 pain points ($8.35M impact), proposed solution, 3-year ROI model (215%), 2 case studies, competitive context"
+    }
+  ],
+  "learning_objectives": [
+    "Choose a stack that creates a sales-grade visual experience — font, layout, and colour are persuasion tools",
+    "Read a prospect brief and identify what each stakeholder needs to see before they sign",
+    "Validate your prompt to ensure the ROI story and stakeholder messaging are both present before building",
+    "Build a proposal microsite that makes the value case impossible to miss",
+    "Deliver a self-contained HTML file a sales rep can open from their laptop in any client meeting"
+  ],
+  "deliverable": "Single-file interactive HTML proposal microsite"
+}

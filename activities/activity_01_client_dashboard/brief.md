@@ -6,8 +6,7 @@
 **Client:** Meridian Retail Group
 **Deliverable:** Single-file interactive HTML QBR dashboard
 **Audience:** Leadership team — quarterly business review, tomorrow
-**Your data file:** `meridian_q4_data.xlsx` (4 sheets: Revenue Summary, Monthly Revenue, Client Risk Table, Pipeline)
-**Design references:** `screenshot_1.png` and `screenshot_2.png` in this folder
+**Data files in your folder:** `meridian_q4_data.xlsx` · `genpact_logo.png` · `screenshot_1.png` · `screenshot_2.png`
 
 ## context
 

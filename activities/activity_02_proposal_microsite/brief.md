@@ -5,8 +5,7 @@
 **Client:** Calloway Industries — $2.4B industrial manufacturer, Atlanta GA  
 **Deliverable:** Single-file HTML proposal microsite  
 **Audience:** Robert Chen (CPO), Sarah Whitfield (VP Operations), Marcus Webb (Head of IT & Digital)  
-**Data:** prospect_brief.json  
-**Design references:** screenshot_1.png and screenshot_2.png in your folder
+**Data files in your folder:** `calloway_deal_data.xlsx` · `calloway_competitor_grid.pdf` · `genpact_logo.png` · `screenshot_1.png` · `screenshot_2.png`
 
 ## context
 Four things the microsite must do — non-negotiable:
@@ -17,8 +16,8 @@ Four things the microsite must do — non-negotiable:
 4. **Proof** — At least one case study with matching industry context must appear before the call to action.
 
 ## do_this
-1. Open screenshot_1.png and screenshot_2.png — this is the visual quality standard you are building toward
-2. Open prospect_brief.json — read the stakeholder map and ROI model
+1. Open screenshot_1.png and screenshot_2.png from your folder — this is the visual quality standard you are building toward
+2. Open calloway_deal_data.xlsx — read the Stakeholders sheet and ROI Model sheet
 3. Answer these three questions before moving to Craft:
    - What is Robert Chen's specific concern, and what past event explains his skepticism?
    - Which case study is a closer match to Calloway's situation — Nordic or Pacific?

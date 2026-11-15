@@ -5,8 +5,7 @@
 **Portfolio:** Genpact Client Delivery — APAC, December 2024  
 **Deliverable:** Single-file HTML project portfolio dashboard  
 **Audience:** VP Client Delivery leadership review — Priya Nair and direct reports  
-**Data:** project_tracker.json  
-**Design references:** screenshot_1.png and screenshot_2.png in your folder
+**Data files in your folder:** `apac_portfolio_tracker.xlsx` · `escalation_matrix.pdf` · `genpact_logo.png` · `screenshot_1.png` · `screenshot_2.png`
 
 ## context
 Four things the dashboard must surface — non-negotiable:
@@ -17,8 +16,8 @@ Four things the dashboard must surface — non-negotiable:
 4. **Budget burn tells the sub-story** — Budget consumed % by project shows which Red/Amber projects are also overspent. P010 at 94% with scope incomplete is a different kind of problem than P003 at 87% with a failed UAT.
 
 ## do_this
-1. Open screenshot_1.png and screenshot_2.png — this is the visual standard for a leadership-ready portfolio dashboard
-2. Open project_tracker.json — read the two Red projects (P003, P010) and the portfolio summary
+1. Open screenshot_1.png and screenshot_2.png from your folder — this is the visual standard for a leadership-ready portfolio dashboard
+2. Open apac_portfolio_tracker.xlsx — read the Escalation Cards sheet (P003, P010) and Portfolio Scorecard sheet
 3. Answer these three questions before moving to Craft:
    - What is the specific risk on P003 and what has already happened (not just at risk — already happened)?
    - Why is P010 a budget escalation as well as a delivery escalation?

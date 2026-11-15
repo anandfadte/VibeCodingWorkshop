@@ -27,7 +27,19 @@
       "filename": "genpact_logo.png",
       "display_name": "Genpact Logo",
       "type": "png",
-      "role": "Genpact brand logo — attach to your AI tool so it can include the logo in the report header"
+      "role": "Genpact brand logo — attach so the AI embeds it in the report header"
+    },
+    {
+      "filename": "screenshot_1.png",
+      "display_name": "Design Reference 1 — System & Colors",
+      "type": "png",
+      "role": "Design system: blue #1D4ED8 accent, green/red channel performance coding, card patterns — attach so the AI matches this visual standard"
+    },
+    {
+      "filename": "screenshot_2.png",
+      "display_name": "Design Reference 2 — Target Layout",
+      "type": "png",
+      "role": "Target report layout: hero attainment stat, channel CPO bar chart, conversion funnel, reallocation cards — attach so the AI matches this layout"
     }
   ],
   "learning_objectives": [

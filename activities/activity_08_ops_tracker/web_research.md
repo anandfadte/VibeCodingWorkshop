@@ -2,7 +2,7 @@
 > Build the prompt. Five blanks to fill — all require business judgment, not data lookup.
 
 ## context
-The AI will read all project statuses, budget figures, milestone states, client satisfaction scores, and risk statements directly from project_tracker.json. Your job is to supply what the data file cannot: who is running this review, what management story the RAG counts tell, and what specific decision each Red project needs from leadership today.
+The AI will read all project statuses, budget figures, milestone states, client satisfaction scores, and risk statements directly from **apac_portfolio_tracker.xlsx** (4 sheets: Portfolio Scorecard, Project Details, Revenue at Risk, Escalation Cards). The **escalation_matrix.pdf** defines the escalation thresholds and owner contacts. Your job is to supply what the data files cannot: who is running this review, what management story the RAG counts tell, and what specific decision each Red project needs from leadership today.
 
 ## do_this
 Read the five placeholders. Write your answers directly into the prompt below.
@@ -13,7 +13,7 @@ Build a single-file HTML project portfolio dashboard for Genpact Client Delivery
 AUDIENCE:
 [WHO_IS_IN_THE_ROOM → one sentence: who is running this leadership review and what decisions must leave this meeting? Name at least two decisions that require VP-level authority.]
 
-DATA: Attach project_tracker.json to this conversation. Read all project statuses, RAG ratings, contract values, budget consumed %, milestone states, risk statements, and client satisfaction scores directly from the file — do not ask me for numbers, do not hardcode values.
+DATA: Attach apac_portfolio_tracker.xlsx, escalation_matrix.pdf, screenshot_1.png, screenshot_2.png, and genpact_logo.png to this conversation. Read all project statuses, RAG ratings, contract values, budget consumed %, milestone states, risk statements, and client satisfaction scores directly from apac_portfolio_tracker.xlsx — do not ask me for numbers, do not hardcode values.
 
 DESIGN KIT — do not change these lines:
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@ DESIGN KIT — do not change these lines:
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.54.0/dist/apexcharts.min.js"></script>
 
-DESIGN: Inter font. Background #F8FAFC. Accent #0F172A (slate). Text #1E293B. White card surfaces. RAG: Green #16A34A, Amber #D97706, Red #DC2626. Match the layout and visual treatment shown in screenshot_1.png and screenshot_2.png.
+DESIGN: Inter font. Background #F8FAFC. Accent #0F172A (slate). Text #1E293B. White card surfaces. RAG: Green #16A34A, Amber #D97706, Red #DC2626. Embed genpact_logo.png in the dashboard header. Match the layout and visual treatment shown in screenshot_1.png and screenshot_2.png exactly.
 
 PORTFOLIO NARRATIVE:
 [REVIEW_NARRATIVE → 2 sentences. What is the management story of this portfolio in December 2024? Go beyond "3 of 22 projects are Red" — state what the pattern means for delivery confidence and client relationships heading into Q1.]

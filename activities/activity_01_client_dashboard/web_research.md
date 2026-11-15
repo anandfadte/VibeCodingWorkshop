@@ -20,7 +20,7 @@ Build a single-file HTML QBR dashboard for Meridian Retail Group.
 AUDIENCE:
 [WHO_IS_IN_THE_ROOM → one sentence: who is presenting this, to whom, and what decision does the room need to make after this meeting?]
 
-DATA: Attach meridian_q4_data.xlsx to this conversation. Read all values, ratios, and client details directly from the file — do not ask me for numbers, do not hardcode values.
+DATA: Attach meridian_q4_data.xlsx, screenshot_1.png, screenshot_2.png, and genpact_logo.png to this conversation. Read all values, ratios, and client details directly from meridian_q4_data.xlsx — do not ask me for numbers, do not hardcode values.
 
 DESIGN KIT — do not change these lines:
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -28,8 +28,7 @@ DESIGN KIT — do not change these lines:
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.54.0/dist/apexcharts.min.js"></script>
 
-DESIGN: Inter font. Primary #4F46E5. Background #F8FAFC. White card surfaces. Text #1E293B.
-Match the layout and visual treatment shown in screenshot_1.png and screenshot_2.png exactly.
+DESIGN: Inter font. Primary #4F46E5. Background #F8FAFC. White card surfaces. Text #1E293B. Embed genpact_logo.png in the dashboard header. Match the layout and visual treatment shown in screenshot_1.png and screenshot_2.png exactly.
 
 THE STORY OF THIS QUARTER:
 [QUARTER_STORY → 2 sentences. What happened this quarter? What went well, what fell short, and what needs immediate attention? Write this after reading the data file — this frames how the AI will emphasise and label the data.]

@@ -27,7 +27,19 @@
       "filename": "genpact_logo.png",
       "display_name": "Genpact Logo",
       "type": "png",
-      "role": "Client logo for the dashboard header"
+      "role": "Genpact brand logo — attach so the AI embeds it in the dashboard header"
+    },
+    {
+      "filename": "screenshot_1.png",
+      "display_name": "Design Reference 1 — System & Colors",
+      "type": "png",
+      "role": "Design system: teal #0F766E accent, RAG color coding, tile component patterns — attach so the AI matches this visual standard"
+    },
+    {
+      "filename": "screenshot_2.png",
+      "display_name": "Design Reference 2 — Target Layout",
+      "type": "png",
+      "role": "Target analytics layout: KPI scorecard row, simulation panel, department charts, alert callout — attach so the AI matches this layout"
     }
   ],
   "learning_objectives": [

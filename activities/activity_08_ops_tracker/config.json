@@ -27,7 +27,19 @@
       "filename": "genpact_logo.png",
       "display_name": "Genpact Logo",
       "type": "png",
-      "role": "Genpact brand logo — attach to your AI tool so it can include the logo in the tracker header"
+      "role": "Genpact brand logo — attach so the AI embeds it in the tracker header"
+    },
+    {
+      "filename": "screenshot_1.png",
+      "display_name": "Design Reference 1 — System & Colors",
+      "type": "png",
+      "role": "Design system: slate #0F172A accent, RAG color coding Green/Amber/Red, card patterns — attach so the AI matches this visual standard"
+    },
+    {
+      "filename": "screenshot_2.png",
+      "display_name": "Design Reference 2 — Target Layout",
+      "type": "png",
+      "role": "Target tracker layout: 5-tile portfolio summary, escalation cards for Red projects, project table with RAG filter — attach so the AI matches this layout"
     }
   ],
   "learning_objectives": [

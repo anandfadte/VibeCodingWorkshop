@@ -2,7 +2,7 @@
 > Build the prompt. Five blanks to fill — all require business judgment, not data lookup.
 
 ## context
-The AI will read all numbers from campaign_analysis.json — spend, leads, MQLs, SQLs, opportunities, cost per opportunity, pipeline value, monthly trends, audience segments. Your job is to supply what the data file cannot: who is making the budget decision, what story the data tells beyond the headline miss, and where the Q4 money should go.
+The AI will read all numbers from **campaign_q3_results.xlsx** (4 sheets: Campaign Summary, Channel Performance, Monthly Trend, Audience Segments). The **q4_budget_brief.pdf** gives the Q4 budget envelope and pre-committed channels — read it too. Your job is to supply what the data files cannot: who is making the budget decision, what story the data tells beyond the headline miss, and where the Q4 money should go.
 
 ## do_this
 Read the five placeholders. Write your answers directly into the prompt below.
@@ -13,7 +13,7 @@ Build a single-file HTML campaign performance report for the Genpact Enterprise 
 AUDIENCE:
 [WHO_IS_IN_THE_ROOM → one sentence: who is presenting this, to whom, and what is the decision the room needs to make? Name the budget figure being decided and the deadline.]
 
-DATA: Attach campaign_analysis.json to this conversation. Read all spend figures, lead volumes, conversion rates, cost-per-opportunity by channel, and audience segment data directly from the file — do not ask me for numbers, do not hardcode values.
+DATA: Attach campaign_q3_results.xlsx, q4_budget_brief.pdf, screenshot_1.png, screenshot_2.png, and genpact_logo.png to this conversation. Read all spend figures, lead volumes, conversion rates, and cost-per-opportunity by channel directly from campaign_q3_results.xlsx — do not ask me for numbers, do not hardcode values.
 
 DESIGN KIT — do not change these lines:
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@ DESIGN KIT — do not change these lines:
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.54.0/dist/apexcharts.min.js"></script>
 
-DESIGN: Inter font. Background #F8FAFC. Primary accent #1D4ED8 (blue). Text #1E293B. Best performer: green #16A34A. Worst performer: red #DC2626. White card surfaces. Match the layout and visual treatment shown in screenshot_1.png and screenshot_2.png.
+DESIGN: Inter font. Background #F8FAFC. Primary accent #1D4ED8 (blue). Text #1E293B. Best performer: green #16A34A. Worst performer: red #DC2626. White card surfaces. Embed genpact_logo.png in the report header. Match the layout and visual treatment shown in screenshot_1.png and screenshot_2.png exactly.
 
 CAMPAIGN VERDICT:
 [CAMPAIGN_VERDICT → One sentence: was this a failed campaign or a learning campaign, and why? Do not simply say "we missed target" — give the nuanced verdict that sets up the budget reallocation conversation.]

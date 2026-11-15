@@ -5,8 +5,7 @@
 **Campaign:** Genpact Enterprise Intelligence Suite — Market Launch  
 **Deliverable:** Single-file HTML campaign performance report  
 **Audience:** CMO, VP Demand Generation, and CFO — Q4 budget reallocation decision  
-**Data:** campaign_analysis.json  
-**Design references:** screenshot_1.png and screenshot_2.png in your folder
+**Data files in your folder:** `campaign_q3_results.xlsx` · `q4_budget_brief.pdf` · `genpact_logo.png` · `screenshot_1.png` · `screenshot_2.png`
 
 ## context
 Four things the report must make unmissable — non-negotiable:
@@ -17,8 +16,8 @@ Four things the report must make unmissable — non-negotiable:
 4. **The reallocation case** — The report must end with a clear budget recommendation, not a list of observations.
 
 ## do_this
-1. Open screenshot_1.png and screenshot_2.png — this is the visual standard for a decision-ready marketing report
-2. Open campaign_analysis.json — read the channels array and key_findings
+1. Open screenshot_1.png and screenshot_2.png from your folder — this is the visual standard for a decision-ready marketing report
+2. Open campaign_q3_results.xlsx — read the Channel Performance sheet and Campaign Summary sheet
 3. Answer these three questions before moving to Craft:
    - Which channel produced the most leads — and how many opportunities did it generate?
    - What is the cost-per-opportunity gap between the best and worst channels?

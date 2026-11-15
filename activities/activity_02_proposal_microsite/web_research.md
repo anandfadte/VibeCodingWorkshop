@@ -2,7 +2,7 @@
 > Build the prompt. Five blanks to fill — all require business judgment, not data lookup.
 
 ## context
-The AI will read all numbers from prospect_brief.json — pain costs, ROI figures, payback months, case study results, differentiators. Your job is to supply what the data file cannot: who is in the room, what story wins the deal, and which proof point matters most for this specific buyer.
+The AI will read all numbers from **calloway_deal_data.xlsx** (5 sheets: Company Profile, Stakeholders, Pain Points, ROI Model, Case Studies) and use **calloway_competitor_grid.pdf** as competitive context. Your job is to supply what the data files cannot: who is in the room, what story wins the deal, and which proof point matters most for Robert Chen specifically.
 
 ## do_this
 Read the five placeholders. Write your answers directly into the prompt below.
@@ -13,7 +13,7 @@ Build a single-file HTML proposal microsite for Calloway Industries.
 AUDIENCE:
 [WHO_IS_IN_THE_ROOM → one sentence: who is presenting this, to whom, and what decision does the room need to make? Name the economic buyer and state his specific concern.]
 
-DATA: Attach prospect_brief.json to this conversation. Read all cost figures, ROI calculations, timeline details, and case study results directly from the file — do not ask me for numbers, do not hardcode values.
+DATA: Attach calloway_deal_data.xlsx, calloway_competitor_grid.pdf, screenshot_1.png, screenshot_2.png, and genpact_logo.png to this conversation. Read all cost figures, ROI calculations, timeline details, stakeholder concerns, and case study results directly from calloway_deal_data.xlsx — do not ask me for numbers, do not hardcode values.
 
 DESIGN KIT — do not change these lines:
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@ DESIGN KIT — do not change these lines:
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.54.0/dist/apexcharts.min.js"></script>
 
-DESIGN: Inter font. Dark navy #1E2A4A background. Blue accent #3B82F6. Gold #F59E0B for hero ROI numbers. White card surfaces on navy. Match the layout and visual treatment shown in screenshot_1.png and screenshot_2.png.
+DESIGN: Inter font. Dark navy #1E2A4A background. Blue accent #3B82F6. Gold #F59E0B for hero ROI numbers. White card surfaces on navy. Embed genpact_logo.png in the microsite header. Match the layout and visual treatment shown in screenshot_1.png and screenshot_2.png exactly.
 
 OPENING HOOK:
 [OPENING_HOOK → Write the single sentence that opens the hero section — the one that makes the CPO stop scrolling. It must quantify the cost of the status quo before offering a solution. Do not name the vendor in the hook.]

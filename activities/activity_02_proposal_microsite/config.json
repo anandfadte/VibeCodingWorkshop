@@ -27,7 +27,19 @@
       "filename": "genpact_logo.png",
       "display_name": "Genpact Logo",
       "type": "png",
-      "role": "Genpact brand logo — attach to your AI tool so it can include the logo in the microsite header"
+      "role": "Genpact brand logo — attach so the AI embeds it in the microsite header"
+    },
+    {
+      "filename": "screenshot_1.png",
+      "display_name": "Design Reference 1 — System & Colors",
+      "type": "png",
+      "role": "Design system: dark navy background, blue/gold accents, card surface treatment — attach so the AI matches this visual standard"
+    },
+    {
+      "filename": "screenshot_2.png",
+      "display_name": "Design Reference 2 — Target Layout",
+      "type": "png",
+      "role": "Target microsite layout: hero ROI section above fold, tab-strip stakeholder cards, case study section — attach so the AI matches this layout"
     }
   ],
   "learning_objectives": [

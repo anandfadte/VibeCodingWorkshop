@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import {
   Check, ChevronDown, ChevronRight, Lock, Eye, Lightbulb,
   Timer, Play, Pause, RotateCcw, Copy, CheckCheck,
-  Globe, FileText, Zap, Sparkles,
+  Globe, FileText, Zap, Sparkles, Download,
 } from "lucide-react";
 
 interface PhaseContent {
@@ -290,7 +290,7 @@ export function ActivityPhases({ slug, phases, dataFiles = [], durationMinutes }
                       </button>
                     ) : (
                       <button onClick={() => unlockNext(idx)} className="rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white hover:bg-accent/90 transition-colors">
-                        Done — unlock phase {phase.number + 1}
+                        Done — move to {phases[idx + 1]?.title ?? `phase ${phase.number + 1}`} →
                       </button>
                     )}
                   </div>
@@ -313,18 +313,38 @@ export function ActivityPhases({ slug, phases, dataFiles = [], durationMinutes }
         <div className="rounded-xl border border-border bg-surface-alt p-5">
           <div className="flex items-center gap-2 text-sm font-semibold text-text-primary mb-3">
             <FileText size={16} className="text-accent" />
-            Folder data ({dataFiles.length} file{dataFiles.length !== 1 ? "s" : ""})
+            Data files — download and attach to your AI tool
           </div>
-          <ul className="space-y-2">
-            {dataFiles.map((f) => (
-              <li key={f.filename} className="flex items-start gap-2">
-                <span className="mt-0.5 inline-block h-5 w-5 shrink-0 rounded bg-accent/10 text-center text-[10px] font-bold leading-5 text-accent uppercase">{f.type.slice(0, 3)}</span>
-                <div>
-                  <p className="text-sm font-medium text-text-primary">{f.display_name}</p>
-                  <p className="text-xs text-text-muted">{f.role}</p>
-                </div>
-              </li>
-            ))}
+          <ul className="space-y-3">
+            {dataFiles.map((f) => {
+              const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+              const href = `${basePath}/data/${slug}/${f.filename}`;
+              const typeLabel = f.type.toUpperCase().slice(0, 4);
+              const typeColour =
+                f.type === "xlsx" ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400"
+                : f.type === "pdf" ? "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400"
+                : f.type === "png" ? "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400"
+                : "bg-accent/10 text-accent";
+              return (
+                <li key={f.filename} className="flex items-start justify-between gap-3">
+                  <div className="flex items-start gap-2 min-w-0">
+                    <span className={`mt-0.5 inline-block h-5 shrink-0 rounded px-1.5 text-center text-[9px] font-bold leading-5 uppercase ${typeColour}`}>{typeLabel}</span>
+                    <div className="min-w-0">
+                      <p className="text-sm font-medium text-text-primary">{f.display_name}</p>
+                      <p className="text-xs text-text-muted line-clamp-2">{f.role}</p>
+                    </div>
+                  </div>
+                  <a
+                    href={href}
+                    download={f.filename}
+                    className="shrink-0 inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-xs font-semibold text-text-primary hover:bg-surface hover:border-accent hover:text-accent transition-colors"
+                  >
+                    <Download size={12} />
+                    Download
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
       )}

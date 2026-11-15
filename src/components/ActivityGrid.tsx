@@ -17,6 +17,12 @@ interface ActivityCard {
   plugins: string[];
 }
 
+const CARD_ACCENTS = ["#0EA5E9", "#1E3A5F", "#0F766E", "#D97706", "#334155"];
+
+function cardAccent(sortOrder: number): string {
+  return CARD_ACCENTS[(sortOrder - 1) % CARD_ACCENTS.length];
+}
+
 export function ActivityGrid({ activities, domains }: { activities: ActivityCard[]; domains: string[] }) {
   const [domainFilter, setDomainFilter] = useState("");
 
@@ -44,7 +50,8 @@ export function ActivityGrid({ activities, domains }: { activities: ActivityCard
           <Link
             key={a.slug}
             href={`/activities/${a.slug}`}
-            className="group relative rounded-xl border border-border bg-surface p-5 transition-all hover:shadow-md hover:border-accent/50 flex flex-col"
+            className="group relative rounded-xl border border-border bg-surface p-5 transition-all hover:shadow-md hover:border-accent/50 flex flex-col overflow-hidden"
+            style={{ borderLeft: `3px solid ${cardAccent(a.sort_order)}` }}
           >
             <div className="mb-3">
               <span className="text-3xl font-bold text-accent/80">{String(a.sort_order).padStart(2, "0")}</span>

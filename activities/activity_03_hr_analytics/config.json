@@ -12,10 +12,22 @@
   "skill_chain": [],
   "data_files": [
     {
-      "filename": "hr_metrics.json",
-      "display_name": "Genpact APAC HR Metrics — Q4 FY2024",
-      "type": "json",
-      "role": "Genpact APAC BU — 2,847 headcount, 7 departments, 16.3% attrition (benchmark 13.5%), hiring pipeline, engagement scores (68 vs 72 benchmark), $12.8M attrition cost"
+      "filename": "genpact_hr_metrics.xlsx",
+      "display_name": "Genpact HR Metrics — Q4 2024",
+      "type": "xlsx",
+      "role": "4 sheets: Headcount by dept (2,847 total), Attrition by Quarter, Engagement Scores (68 vs 72 benchmark), Exit Survey Reasons — all numbers the AI will read"
+    },
+    {
+      "filename": "hr_benchmark_targets.pdf",
+      "display_name": "HR Benchmarks & Targets",
+      "type": "pdf",
+      "role": "Mercer/WTW 2024 benchmarks: 13.5% attrition target, 72 engagement target, 12-month intervention roadmap — reference for the AI to surface gaps"
+    },
+    {
+      "filename": "genpact_logo.png",
+      "display_name": "Genpact Logo",
+      "type": "png",
+      "role": "Client logo for the dashboard header"
     }
   ],
   "learning_objectives": [

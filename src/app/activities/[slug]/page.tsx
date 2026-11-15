@@ -31,7 +31,7 @@ export default async function ActivityPage({
   const next = currentIndex < allActivities.length - 1 ? allActivities[currentIndex + 1] : null;
 
   const { config } = activity;
-  const activityNum = parseInt(config.id.replace("activity_", ""), 10);
+  const activityNum = currentIndex + 1;
 
   return (
     <div className="mx-auto max-w-[900px] px-4 py-10">
@@ -118,6 +118,7 @@ export default async function ActivityPage({
         <ActivityPhases
           slug={config.slug}
           phases={activity.phases}
+          dataFiles={config.data_files ?? []}
           durationMinutes={config.duration_minutes}
         />
       </section>
@@ -133,7 +134,7 @@ export default async function ActivityPage({
             <div>
               <div className="text-xs text-text-muted">Previous</div>
               <div className="font-medium text-text-secondary group-hover:text-accent">
-                {String(parseInt(prev.config.id.replace("activity_", ""), 10)).padStart(2, "0")}. {prev.config.title}
+                {String(currentIndex).padStart(2, "0")}. {prev.config.title}
               </div>
             </div>
           </Link>
@@ -148,7 +149,7 @@ export default async function ActivityPage({
             <div>
               <div className="text-xs text-text-muted">Next</div>
               <div className="font-medium text-text-secondary group-hover:text-accent">
-                {String(parseInt(next.config.id.replace("activity_", ""), 10)).padStart(2, "0")}. {next.config.title}
+                {String(currentIndex + 2).padStart(2, "0")}. {next.config.title}
               </div>
             </div>
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />

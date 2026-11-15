@@ -10,22 +10,19 @@ const PHASES = [
 export default async function ActivitiesPage() {
   const activities = await getActivities();
 
-  const cards = activities.map((a) => {
-    const num = parseInt(a.config.id.replace("activity_", ""), 10);
-    return {
-      id: a.config.id,
-      slug: a.config.slug,
-      title: a.config.title,
-      subtitle: a.config.subtitle,
-      domain: a.config.domain,
-      duration_minutes: a.config.duration_minutes,
-      difficulty: a.config.difficulty,
-      sort_order: num,
-      deliverable: a.config.deliverable,
-      skill_chain: a.config.skill_chain ?? [],
-      plugins: a.config.plugins ?? [],
-    };
-  });
+  const cards = activities.map((a, i) => ({
+    id: a.config.id,
+    slug: a.config.slug,
+    title: a.config.title,
+    subtitle: a.config.subtitle,
+    domain: a.config.domain,
+    duration_minutes: a.config.duration_minutes,
+    difficulty: a.config.difficulty,
+    sort_order: i + 1,
+    deliverable: a.config.deliverable,
+    skill_chain: a.config.skill_chain ?? [],
+    plugins: a.config.plugins ?? [],
+  }));
 
   const domains = [...new Set(cards.map((c) => c.domain))].sort();
 

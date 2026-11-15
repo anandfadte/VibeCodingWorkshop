@@ -5,7 +5,7 @@
 **Organisation:** Genpact APAC Business Unit  
 **Deliverable:** Single-file HTML HR analytics dashboard  
 **Audience:** ExCo — people health review, January 2025 offsite  
-**Data:** hr_metrics.json  
+**Data files:** genpact_hr_metrics.xlsx (4 sheets of HR data) + hr_benchmark_targets.pdf (Mercer/WTW 2024 benchmarks) + genpact_logo.png (dashboard header)  
 **Design references:** screenshot_1.png and screenshot_2.png in your folder
 
 ## context
@@ -18,7 +18,7 @@ Four things the dashboard must surface — non-negotiable:
 
 ## do_this
 1. Open screenshot_1.png and screenshot_2.png — this is the visual standard for a board-ready people dashboard
-2. Open hr_metrics.json — read the attrition by department and engagement by department sections
+2. Open genpact_hr_metrics.xlsx — read the Headcount sheet (attrition by dept) and the Engagement Scores sheet
 3. Answer these three questions before moving to Craft:
    - Which two departments have both above-benchmark attrition AND below-benchmark engagement?
    - What is the total annual cost of attrition, and what is cost per exit?

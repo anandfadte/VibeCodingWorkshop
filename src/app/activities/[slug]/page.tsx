@@ -5,6 +5,7 @@ import {
   ArrowRight,
   ChevronLeft,
   Clock,
+  Download,
   Layers,
   Zap,
 } from "lucide-react";
@@ -52,6 +53,39 @@ export default async function ActivityPage({
           </span>{" "}
           {config.title}
         </h1>
+
+        {/* Data files download — right under the title, always above the fold */}
+        {config.data_files && config.data_files.length > 0 && (
+          <div className="mb-5 rounded-xl border-2 border-accent/40 bg-accent/5 px-4 py-3">
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent">
+                <Download size={13} />
+                Data files — download and attach to your AI tool:
+              </span>
+              {config.data_files.map((f) => {
+                const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+                const href = `${basePath}/data/${config.slug}/${f.filename}`;
+                const typeColour =
+                  f.type === "xlsx" ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400"
+                  : f.type === "pdf"  ? "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400"
+                  : f.type === "png"  ? "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400"
+                  : "bg-accent/10 text-accent";
+                return (
+                  <a
+                    key={f.filename}
+                    href={href}
+                    download={f.filename}
+                    className="inline-flex items-center gap-1.5 rounded-lg bg-accent px-3 py-1.5 text-xs font-semibold text-white hover:bg-accent/90 transition-colors"
+                  >
+                    <span className={`rounded px-1 py-0.5 text-[8px] font-bold uppercase ${typeColour}`}>{f.type.toUpperCase().slice(0, 4)}</span>
+                    {f.display_name}
+                    <Download size={11} />
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
         <p className="mb-6 text-lg text-text-secondary">{config.subtitle}</p>
 

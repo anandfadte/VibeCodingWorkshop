@@ -6,7 +6,7 @@
 **Client:** Meridian Retail Group
 **Deliverable:** Single-file interactive HTML QBR dashboard
 **Audience:** Leadership team — quarterly business review, tomorrow
-**Your data file:** `q4_performance_data.json`
+**Your data file:** `meridian_q4_data.xlsx` (4 sheets: Revenue Summary, Monthly Revenue, Client Risk Table, Pipeline)
 **Design references:** `screenshot_1.png` and `screenshot_2.png` in this folder
 
 ## context
@@ -27,7 +27,7 @@ Four non-negotiable rules extracted from the design standard:
 
 1. Open `screenshot_1.png` — this shows the design system: colors, typography, and tile component patterns
 2. Open `screenshot_2.png` — this shows the target dashboard layout for this activity
-3. Open `q4_performance_data.json` — read it for 3 minutes
+3. Open `meridian_q4_data.xlsx` — read the Revenue Summary and Client Risk Table sheets (3 minutes)
 4. Answer these three questions before moving to Craft:
    - What is the revenue attainment percentage?
    - Which client has High renewal risk, and what are their YoY growth and NPS?

@@ -3,7 +3,7 @@
 
 ## context
 
-Your prompt template is below. When you fire it, attach `q4_performance_data.json` to the conversation — the AI will read every figure, calculation, and client detail directly from the file.
+Your prompt template is below. When you fire it, attach `meridian_q4_data.xlsx` to the conversation — the AI will read every figure, calculation, and client detail directly from the file (4 sheets: Revenue Summary, Monthly Revenue, Client Risk Table, Pipeline).
 
 What you supply are the five things the AI cannot get from a spreadsheet: who is in the room, what story the data tells, which number deserves to dominate, and what action the at-risk client requires. These blanks require judgment, not lookup.
 
@@ -20,7 +20,7 @@ Build a single-file HTML QBR dashboard for Meridian Retail Group.
 AUDIENCE:
 [WHO_IS_IN_THE_ROOM → one sentence: who is presenting this, to whom, and what decision does the room need to make after this meeting?]
 
-DATA: Attach q4_performance_data.json to this conversation. Read all values, ratios, and client details directly from the file — do not ask me for numbers, do not hardcode values.
+DATA: Attach meridian_q4_data.xlsx to this conversation. Read all values, ratios, and client details directly from the file — do not ask me for numbers, do not hardcode values.
 
 DESIGN KIT — do not change these lines:
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">

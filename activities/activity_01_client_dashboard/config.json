@@ -12,10 +12,10 @@
   "skill_chain": [],
   "data_files": [
     {
-      "filename": "q4_performance_data.json",
-      "display_name": "Q4 Performance Data — Meridian Retail Group",
-      "type": "json",
-      "role": "Meridian Retail Group Q4 FY2024 — $42.8M revenue, 4 regions, 10 clients, pipeline data"
+      "filename": "meridian_q4_data.xlsx",
+      "display_name": "Meridian Retail Group — Q4 FY2024 Data",
+      "type": "xlsx",
+      "role": "4 sheets: Revenue Summary (scorecard + regions + product mix), Monthly Revenue (Jan–Dec), Client Risk Table (10 clients, renewal risk), Pipeline (Q1 2025 forecast)"
     }
   ],
   "learning_objectives": [

@@ -1,28 +1,28 @@
 # Brief
-> Get oriented in 5 minutes. Read the scenario. Review the design references. Skim the HR metrics file.
+> Get oriented. 5 minutes. Screenshots show the visual bar — your job is to know the people-health story before you write it.
 
 ## scenario
-**Organisation:** Genpact APAC Business Unit  
-**Deliverable:** Single-file HTML HR analytics dashboard  
-**Audience:** ExCo — people health review, January 2025 offsite  
-**Data files:** genpact_hr_metrics.xlsx (4 sheets of HR data) + hr_benchmark_targets.pdf (Mercer/WTW 2024 benchmarks) + genpact_logo.png (dashboard header)  
-**Design references:** screenshot_1.png and screenshot_2.png in your folder
 
-## context
-Four things the dashboard must surface — non-negotiable:
+**Organisation:** Genpact APAC Business Unit
+**Deliverable:** Single-file interactive HTML HR analytics dashboard
+**Audience:** ExCo — people health review, January 2025 offsite
+**Data files in your folder:** `genpact_hr_metrics.xlsx` · `hr_benchmark_targets.pdf` · `genpact_logo.png` · `screenshot_1.png` · `screenshot_2.png`
 
-1. **Attrition signal** — Overall attrition vs benchmark with the departments most at risk flagged clearly. Red/amber/green status at a glance. All figures from the data file.
-2. **Cost of doing nothing** — Annual attrition cost and cost per exit must be visible. The number exists in the data file — the AI reads it.
-3. **Engagement link** — Engagement score vs benchmark by department. The two departments with low engagement and high attrition together are the burning platform.
-4. **Hiring health** — Time to fill vs benchmark and offer acceptance rate tell a different story than attrition alone.
+## orient
+
+Before you move to Craft, form three things. Each fills a named placeholder in your prompt — the AI reads all the numbers.
+
+**Story** → fills `[HEADLINE_RISK]` in your prompt
+What is the people-health story — cost, risk, and urgency in one sentence?
+
+**Risk** → fills `[BURNING_DEPARTMENT]` in your prompt
+Which department's combination of above-benchmark attrition AND below-benchmark engagement demands ExCo attention today?
+
+**Hero** → fills `[HERO_RATIONALE]` in your prompt
+Which KPI must visually dominate the scorecard — attrition cost, attrition %, engagement score, or headcount? Name it in one phrase.
 
 ## do_this
-1. Open screenshot_1.png and screenshot_2.png — this is the visual standard for a board-ready people dashboard
-2. Open genpact_hr_metrics.xlsx — read the Headcount sheet (attrition by dept) and the Engagement Scores sheet
-3. Answer these three questions before moving to Craft:
-   - Which two departments have both above-benchmark attrition AND below-benchmark engagement?
-   - What is the total annual cost of attrition, and what is cost per exit?
-   - What is the number one exit reason, and what percentage of exits does it explain?
 
-## checkpoint
-You are ready for Craft when you can answer all three questions without looking at the data file.
+1. Open **screenshot_1.png** and **screenshot_2.png** — the design standard is set: Inter font, teal `#0F766E`, RAG status tiles, simulation panel above charts. Match it.
+2. Open **genpact_hr_metrics.xlsx** — skim Headcount sheet and Engagement Scores sheet. 3 minutes is enough.
+3. Move to Craft only when you can fill Story, Risk, and Hero from memory.

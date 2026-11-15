@@ -1,17 +1,20 @@
 ﻿# Craft
-> Build the prompt. Five blanks to fill — all require business judgment, not data lookup.
+> Build the prompt. Five blanks to fill — all require deal judgment, not data lookup. The AI reads every number from the file.
 
 ## context
-The AI will read all numbers from **calloway_deal_data.xlsx** (5 sheets: Company Profile, Stakeholders, Pain Points, ROI Model, Case Studies) and use **calloway_competitor_grid.pdf** as competitive context. Your job is to supply what the data files cannot: who is in the room, what story wins the deal, and which proof point matters most for Robert Chen specifically.
+
+The AI will read all figures from **calloway_deal_data.xlsx** (5 sheets: Company Profile, Stakeholders, Pain Points & Value, ROI Model, Case Studies). Read the competitive context from **calloway_competitor_grid.pdf**. Attach **screenshot_1.png**, **screenshot_2.png**, and **genpact_logo.png** alongside. Your job is to supply the five things the data cannot: the hook that opens the deal, which differentiator answers the failed-implementation objection, which case study fits Robert Chen, what the CTA asks, and how aggressive the ROI framing should be.
 
 ## do_this
-Read the five placeholders. Write your answers directly into the prompt below.
+
+Read the five placeholders. Write your answers directly into the prompt. When every blank is filled and the DESIGN KIT and ANIMATION blocks are unchanged, you are ready to fire.
 
 ## prompt
+
 Build a single-file HTML proposal microsite for Calloway Industries.
 
 AUDIENCE:
-[WHO_IS_IN_THE_ROOM → one sentence: who is presenting this, to whom, and what decision does the room need to make? Name the economic buyer and state his specific concern.]
+[WHO_IS_IN_THE_ROOM → one sentence: who is presenting, to whom, and what decision does the room need to make? Name Robert Chen and state his specific concern.]
 
 DATA: Attach calloway_deal_data.xlsx, calloway_competitor_grid.pdf, screenshot_1.png, screenshot_2.png, and genpact_logo.png to this conversation. Read all cost figures, ROI calculations, timeline details, stakeholder concerns, and case study results directly from calloway_deal_data.xlsx — do not ask me for numbers, do not hardcode values.
 
@@ -24,53 +27,67 @@ DESIGN KIT — do not change these lines:
 DESIGN: Inter font. Dark navy #1E2A4A background. Blue accent #3B82F6. Gold #F59E0B for hero ROI numbers. White card surfaces on navy. Embed genpact_logo.png in the microsite header. Match the layout and visual treatment shown in screenshot_1.png and screenshot_2.png exactly.
 
 OPENING HOOK:
-[OPENING_HOOK → Write the single sentence that opens the hero section — the one that makes the CPO stop scrolling. It must quantify the cost of the status quo before offering a solution. Do not name the vendor in the hook.]
+[OPENING_HOOK → Write the single sentence that opens the hero section — the one that makes Robert Chen stop scrolling. It must quantify the cost of doing nothing. Do not name the vendor in the hook.]
 
 PAIN POINTS SECTION:
-Display all four pain areas as cards with their annual cost impact. Source: current_state_pain_points array.
-Show Total Addressable Cost as the section total. Source: total_addressable_cost_usd.
-Each card: pain area, one-line problem statement, root cause, and cost figure.
+Display all pain areas as cards with their annual cost impact. Source: Pain Points & Value sheet.
+Show Total Addressable Cost as the section total.
+Each card: pain area name, one-line problem statement, root cause, cost figure.
 
-ROI HERO SECTION:
-3-year ROI %, payback months, and net 3-year benefit as the three dominant stat tiles.
-Source: investment_and_roi object. These three numbers close the deal — make them the visual hero of the page.
+ROI HERO SECTION — above the fold:
+3-year ROI %, payback period (months), and net 3-year benefit as the three dominant stat tiles.
+Source: ROI Model sheet. These three numbers close the deal — make them the visual hero of the page.
+
+SIMULATION — place this AFTER the ROI hero section and BEFORE the stakeholder cards:
+Build an interactive "What-If: ROI at Your Investment Level" panel using Alpine.js.
+- A slider: "Total 3-year investment ($M)" ranging from 15 (min) to 25 (max), default set to the base investment figure from the ROI Model sheet.
+- Show the current value: "Investment: $XX.XM" updates in real time.
+- As the slider moves, recalculate and update live: (a) net 3-year benefit, (b) 3-year ROI %, (c) payback period in months.
+- Formula: total_benefit = 64.5 (read from ROI Model sheet, 3-Year Total Benefit row); net_benefit = round(total_benefit − investment, 1); roi_pct = round((net_benefit / investment) * 100); payback = round(investment / (total_benefit / 36)).
+- Display as 3 updating stat tiles: "Net 3-Year Benefit ($M)", "3-Year ROI %", "Payback (months)".
+- Label the panel: "What-If: ROI at Your Investment Level".
+- Sub-label: "Calloway's savings don't change — your investment level does."
+- Use gold #F59E0B for the slider and updated tiles.
 
 STAKEHOLDER SECTION — 3 expandable cards, one per stakeholder:
-Robert Chen (CPO): his concern is not cost alone — name the specific past event that made him skeptical. Source: stakeholders.economic_buyer.concern.
-Sarah Whitfield (VP Operations): address her team capacity problem with the specific percentage from the data. Source: stakeholders.champion.priority.
-Marcus Webb (Head of IT & Digital): his requirement has a one-word answer. Source: genpact_differentiators[0].
+Source: Stakeholders sheet. Each card shows name, title, and priority concern.
+On click, the card expands to show the specific concern and how the solution addresses it.
+Robert Chen's card must name the specific past event that made him skeptical — read it from the data file.
+Sarah Whitfield's card must address her team capacity problem.
+Marcus Webb's card must address his technical integration requirement.
 
 CASE STUDY:
-[CASE_STUDY_CHOICE → Which case study should appear first — Nordic Manufacturing Group or Pacific Distribution Co? Name your choice and explain in one sentence why it is the stronger proof point for Robert Chen specifically.]
-Display the chosen case study with: challenge, solution, results (cycle days, exception rate, savings), and the client quote.
+[CASE_STUDY_CHOICE → Which case study should appear first — Case Study A (Aerospace) or Case Study B (Industrial Manufacturing)? Name your choice and explain in one sentence why it is the stronger proof point for Robert Chen specifically.]
+Display the chosen case study with: challenge, solution, key results, and client quote. Source: Case Studies sheet.
 
 COMPETITIVE DIFFERENTIATORS:
-[COMPETITIVE_EDGE → Which one of the four Genpact differentiators matters most to Robert Chen's specific concern (the failed transformation)? Quote it exactly from the data file and explain in one sentence why it directly addresses his skepticism.]
-Display all four differentiators. Visually highlight the one you chose above.
+[COMPETITIVE_EDGE → Which one of Genpact's differentiators matters most to Robert Chen's failed-implementation concern? Name it from the calloway_competitor_grid.pdf and explain in one sentence why it directly addresses his skepticism.]
+Display all differentiators. Visually highlight the one you chose above.
 
 CALL TO ACTION:
-[CTA_ASK → Write the specific ask at the end of the microsite. What action should Robert Chen take, by when, and what does Genpact offer to make it easy for him to say yes? Reference the decision timeline from the data.]
+[CTA_ASK → Write the specific ask at the end of the microsite. What action should Robert Chen take, by when, and what does Genpact offer to make it easy to say yes? Reference the decision timeline from the Company Profile sheet.]
 
 ANIMATION — do not change or remove any of these:
-- Total addressable cost: counts up from $0 to actual on page load, 2.5s easeOut
-- 3-year ROI %: counts up from 0 to actual, 2s easeOut
-- Payback months: counts down from 36 to actual, 1.8s (shows the transformation)
-- Pain point cards: cascade fade-in top to bottom, 150ms between each card
-- ROI tiles: scale-in simultaneously on page load, 400ms, slight bounce easing
-- Case study card: slides in from the right when scrolled into view, 500ms
-- Stakeholder cards: stagger fade-up left to right, 120ms between cards
-- Competitive differentiator items: stagger reveal on scroll, 80ms between items
-- Hero section numbers: cascade count-up left to right, 200ms stagger
-- Section dividers: draw left-to-right as each section enters viewport, 600ms
+- Total addressable cost: counts up from $0 to actual on page load, 2.2s easeOut — this is the hero counter, it must land with weight
+- All other stat tiles: 150ms fade-in, stagger 80ms apart
+- Simulation stat tiles: 150ms fade-in on page load, then instant update as slider moves
+- Pain point cards: 150ms cascade fade-in top to bottom, 80ms between cards
+- ROI tiles: 150ms scale-in, stagger 80ms
+- Case study card: 150ms slide-in from right when scrolled into view
+- Stakeholder cards: 150ms stagger fade-up, 80ms between cards
+- Competitive differentiator items: 150ms stagger reveal on scroll, 60ms between items
+- Section dividers: 150ms draw left-to-right as each section enters viewport
 
-INTERACTIVITY: Alpine.js — each stakeholder card expands on click to show the specific concern and how the solution addresses it.
+INTERACTIVITY: Alpine.js — each stakeholder card expands on click to show the specific concern and how the solution addresses it. Tab strip at the top for quick navigation between sections.
 
-One complete self-contained HTML file. All numbers from the attached JSON file — no hardcoded values, no fetch calls.
+One complete self-contained HTML file. All numbers from the attached Excel file — no hardcoded values, no fetch calls. Output the complete HTML file in one code block. Do not add explanation before or after. Do not truncate. Do not ask if I want to continue.
 
 ## checkpoint
+
 Your prompt is ready when:
-- [ ] You named the economic buyer and stated his specific concern
-- [ ] Your opening hook quantifies the problem without naming the vendor
+- [ ] You named Robert Chen's specific concern and the past event behind it
+- [ ] Your opening hook quantifies the cost of doing nothing without naming the vendor
 - [ ] You chose a case study and explained why it fits Robert Chen specifically
-- [ ] You identified the one differentiator that addresses his skepticism about failed transformations
-- [ ] Your CTA asks for a specific action before the data file's decision deadline
+- [ ] You identified the one differentiator that addresses the failed-transformation concern
+- [ ] Your CTA asks for a specific action before the decision deadline
+- [ ] All files are attached: xlsx + pdf + 2 screenshots + logo

@@ -12,10 +12,22 @@
   "skill_chain": [],
   "data_files": [
     {
-      "filename": "campaign_analysis.json",
-      "display_name": "Q3 FY2024 Campaign Analysis",
-      "type": "json",
-      "role": "Genpact Enterprise Intelligence Suite launch — $1.72M spend across 6 channels, 1,847 leads, 67 opportunities vs 150 target (44.7% attainment), cost-per-opportunity by channel, monthly trend, audience segment breakdown"
+      "filename": "campaign_q3_results.xlsx",
+      "display_name": "Campaign Q3 Results",
+      "type": "xlsx",
+      "role": "4 sheets: Campaign Summary (8 KPIs vs target), Channel Performance (6 channels, CPO ranking), Monthly Trend (Jul–Sep), Audience Segments (by buyer persona)"
+    },
+    {
+      "filename": "q4_budget_brief.pdf",
+      "display_name": "Q4 Budget Planning Brief",
+      "type": "pdf",
+      "role": "1-page Q4 context: approved budget envelope ($1.85M), recommended channel reallocation, decision required (roundtable expansion)"
+    },
+    {
+      "filename": "genpact_logo.png",
+      "display_name": "Genpact Logo",
+      "type": "png",
+      "role": "Genpact brand logo — attach to your AI tool so it can include the logo in the report header"
     }
   ],
   "learning_objectives": [

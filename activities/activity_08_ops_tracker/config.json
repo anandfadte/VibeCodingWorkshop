@@ -12,10 +12,22 @@
   "skill_chain": [],
   "data_files": [
     {
-      "filename": "project_tracker.json",
-      "display_name": "APAC Project Portfolio — Dec 2024",
-      "type": "json",
-      "role": "Genpact APAC Client Delivery — 10 projects shown, RAG status (Green/Amber/Red), $8.2M revenue at risk, budget consumed %, milestone status, top risks and client satisfaction scores"
+      "filename": "apac_portfolio_tracker.xlsx",
+      "display_name": "APAC Portfolio Tracker",
+      "type": "xlsx",
+      "role": "4 sheets: Portfolio Scorecard (10 KPIs), Project Details (10 projects, RAG, budget %, milestones), Revenue at Risk ($8.2M across 4 projects), Escalation Cards (P003 Foxconn + P010 Panasonic detail)"
+    },
+    {
+      "filename": "escalation_matrix.pdf",
+      "display_name": "Escalation Matrix",
+      "type": "pdf",
+      "role": "1-page escalation thresholds (Green/Amber/Red criteria), owner contacts, review cadence"
+    },
+    {
+      "filename": "genpact_logo.png",
+      "display_name": "Genpact Logo",
+      "type": "png",
+      "role": "Genpact brand logo — attach to your AI tool so it can include the logo in the tracker header"
     }
   ],
   "learning_objectives": [

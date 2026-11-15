@@ -12,10 +12,22 @@
   "skill_chain": [],
   "data_files": [
     {
-      "filename": "prospect_brief.json",
-      "display_name": "Calloway Industries Prospect Brief",
-      "type": "json",
-      "role": "Calloway Industries — company profile, stakeholder map, 4 pain points ($8.35M impact), proposed solution, 3-year ROI model (215%), 2 case studies, competitive context"
+      "filename": "calloway_deal_data.xlsx",
+      "display_name": "Calloway Industries Deal Data",
+      "type": "xlsx",
+      "role": "5 sheets: Company Profile ($2.4B revenue, decision timeline), Stakeholders (4 named decision-makers + objections), Pain Points ($47M impact), ROI Model (3-year, 215%), Case Studies (2 aerospace references)"
+    },
+    {
+      "filename": "calloway_competitor_grid.pdf",
+      "display_name": "Competitive Positioning Guide",
+      "type": "pdf",
+      "role": "1-page battle card: Genpact vs Accenture, objection handlers for Robert Chen's failed implementation concern, pricing comparison"
+    },
+    {
+      "filename": "genpact_logo.png",
+      "display_name": "Genpact Logo",
+      "type": "png",
+      "role": "Genpact brand logo — attach to your AI tool so it can include the logo in the microsite header"
     }
   ],
   "learning_objectives": [

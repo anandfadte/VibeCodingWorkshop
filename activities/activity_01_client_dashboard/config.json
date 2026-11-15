@@ -13,9 +13,15 @@
   "data_files": [
     {
       "filename": "meridian_q4_data.xlsx",
-      "display_name": "Meridian Retail Group — Q4 FY2024 Data",
+      "display_name": "Meridian Q4 FY2024 Data",
       "type": "xlsx",
       "role": "4 sheets: Revenue Summary (scorecard + regions + product mix), Monthly Revenue (Jan–Dec), Client Risk Table (10 clients, renewal risk), Pipeline (Q1 2025 forecast)"
+    },
+    {
+      "filename": "genpact_logo.png",
+      "display_name": "Genpact Logo",
+      "type": "png",
+      "role": "Genpact brand logo — attach to your AI tool so it can include the logo in the dashboard header"
     }
   ],
   "learning_objectives": [

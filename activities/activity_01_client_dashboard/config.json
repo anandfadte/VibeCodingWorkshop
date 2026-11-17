@@ -4,10 +4,10 @@
   "title": "Client Dashboard Sprint",
   "subtitle": "Your data is in a file. The client QBR is tomorrow. Build a live interactive dashboard instead of sending another deck.",
   "domain": "Data Visualization",
-  "duration_minutes": 30,
+  "duration_minutes": 40,
   "ai_tool": "Any AI tool (Claude, Copilot, Cursor, Gemini)",
   "difficulty": "Foundation",
-  "phases": 3,
+  "phases": 4,
   "plugins": [],
   "skill_chain": [],
   "data_files": [
@@ -37,11 +37,11 @@
     }
   ],
   "learning_objectives": [
-    "Attach a data file to your AI and let it read every number — your job is context and judgment, not data lookup",
-    "Write the five things a spreadsheet cannot tell an AI: who is in the room, what story the data tells, which number is the hero, and what action is required",
-    "Specify animations and interactivity in a prompt so your first build already has the wow layer — not as an afterthought",
-    "Iterate with precision: name the single most important gap in your first output and fix only that in one follow-up",
-    "Deliver a self-contained HTML dashboard with working animations that opens in any browser — no install, no server, no dependencies"
+    "Frame the problem before writing any prompt — decide what to build, for whom, and what decision it must enable",
+    "Write your own AI prompt using a 5-area scaffold: audience, data, design, what to build, output rules",
+    "Test your first output against the data file — verify at least 3 figures before you iterate",
+    "Improve with one targeted follow-up instead of re-prompting from scratch",
+    "Deliver a self-contained HTML file that opens in any browser — no install, no server, no dependencies"
   ],
   "deliverable": "Single-file interactive HTML QBR dashboard"
 }

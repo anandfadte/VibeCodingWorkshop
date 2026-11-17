@@ -1,35 +1,38 @@
-﻿# Build
-> Fire. Open in browser. Watch the animations. Iterate once. Ship.
+﻿# Prompt
+> Write your prompt. The scaffold has 5 areas. Areas 1 and 4 are yours to write. Areas 2, 3, and 5 are pre-filled.
 
-## scenario
-You have a prompt with five narrative decisions already made. The AI will read all numbers from campaign_analysis.json. Your one job now is to fire it, check the output against the design standard, and fix the single most important gap.
+## context
 
-## do_this
-**Step 1 — Fire**
-Attach campaign_analysis.json to your AI conversation. Paste your completed prompt. Copy the HTML output.
+A prompt that produces a client-ready campaign performance report needs five things. Two require your judgement — they are blank below. The data instruction, design spec, and output rules are pre-filled to handle the technical constraints.
 
-**Step 2 — Open and compare**
-Save as campaign_q3_report.html. Open in a browser. Compare against screenshot_2.png. Check:
-- Do the opportunity attainment numbers count up on load?
-- Is the channel bar chart sorted by cost per opportunity, with the best bar green and the worst red?
-- Is the gap between $12,917 and $270,000 visually dramatic — not a footnote?
+Copy the scaffold below into your AI tool. Write Areas 1 and 4 from your Frame answers. Leave Areas 2, 3, and 5 unchanged.
 
-**Step 3 — One targeted iteration**
-In the same conversation, describe the single most important gap: a chart that doesn't sort correctly, a missing toggle, or numbers that look similar when they should look dramatically different. Send one follow-up. Copy the updated HTML.
+## prompt
+
+Build a single-file HTML campaign performance report for the Genpact Enterprise Intelligence Suite launch.
+
+AREA 1 — AUDIENCE & DECISION (write this yourself):
+Who is in the room? What is the specific budget decision being made? What is the amount, the channels involved, and the deadline? Use your Frame answers here. 2–3 sentences. Be specific — name the budget figure and the reallocation decision, not just "Q4 planning."
+
+AREA 2 — DATA (do not change this):
+Attach campaign_q3_results.xlsx, q4_budget_brief.pdf, screenshot_1.png, screenshot_2.png, and genpact_logo.png to this conversation. Read all spend figures, lead volumes, conversion rates, and cost-per-opportunity by channel directly from campaign_q3_results.xlsx — do not ask me for numbers, do not hardcode values.
+
+AREA 3 — DESIGN (do not change this):
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts@3.54.0/dist/apexcharts.min.js"></script>
+Inter font. Primary #1D4ED8 (blue). Background #F8FAFC. White card surfaces. Text #1E293B. Best performer: green #16A34A. Worst performer: red #DC2626. Embed genpact_logo.png in the report header. Match the layout and visual treatment shown in screenshot_1.png and screenshot_2.png exactly. Add entrance animations — the headline miss should land with impact on load.
+
+AREA 4 — WHAT TO BUILD (write this yourself):
+Describe the sections and charts you decided on in Frame. What is the opening story — the headline metric that sets the context? What is the central channel comparison visual? What data tells the budget reallocation case? What is your Q4 recommendation section? Be specific — the AI builds exactly what you describe.
+
+AREA 5 — OUTPUT FORMAT (do not change this):
+One complete self-contained HTML file. All data from the attached Excel file — no hardcoded numbers, no fetch calls. Output the complete HTML file in one code block. Do not add explanation before or after. Do not truncate. Do not ask if I want to continue.
 
 ## checkpoint
-You are done when:
-- [ ] 67/150 opportunity attainment animates from 0 on load
-- [ ] Channel bars are sorted by cost per opportunity, lowest to highest
-- [ ] Best and worst channels are colour-coded green and red
-- [ ] The toggle between "Cost per Opportunity" and "Lead Quality" views works
-- [ ] No console errors — all charts and animations fire
 
-## reveal_good
-A strong campaign postmortem does one thing most decks fail to do:
-- It makes the **reallocation case visually unavoidable** — when the bar for Webinars is 20x longer than Executive Roundtables, no one argues for keeping the spend
-
-The toggle between cost efficiency and lead quality is the analytical sophistication that separates this from a marketing dashboard. Some channels look terrible on cost but deliver high-quality leads. Some look cheap but fill the funnel with noise. The report shows both.
-
-## reveal_takeaway
-The key lesson: marketing data is usually presented as "here is what happened" — a respectful post-mortem that protects everyone. Your prompt specified the verdict, the hidden insight, and the specific reallocation figures. The AI built the visual. The difference between a data story and a data dump is the five decisions you made before firing.
+Before you fire:
+- Area 1 names the budget figure being decided and the deadline — not just "Q4 planning meeting"
+- Area 4 describes at least 3 sections with the opening story and recommendation section clearly defined
+- All 5 files are ready to attach: campaign_q3_results.xlsx, q4_budget_brief.pdf, screenshot_1.png, screenshot_2.png, genpact_logo.png

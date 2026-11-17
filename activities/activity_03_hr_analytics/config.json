@@ -2,12 +2,12 @@
   "id": "activity_03",
   "slug": "hr-analytics-dashboard",
   "title": "HR Analytics Dashboard",
-  "subtitle": "Build an executive people-health dashboard from raw HR metrics in under 30 minutes.",
+  "subtitle": "Build an executive people-health dashboard from raw HR metrics in under 40 minutes.",
   "domain": "Human Resources",
-  "duration_minutes": 30,
+  "duration_minutes": 40,
   "ai_tool": "Any AI tool (Claude, Copilot, Cursor, Gemini)",
   "difficulty": "Beginner",
-  "phases": 3,
+  "phases": 4,
   "plugins": [],
   "skill_chain": [],
   "data_files": [
@@ -43,11 +43,11 @@
     }
   ],
   "learning_objectives": [
-    "Attach an HR metrics file and let the AI read every percentage and cost figure — your job is risk interpretation, not data lookup",
-    "Write the five things a spreadsheet cannot tell an AI: who is in the ExCo room, what the data story is, which department is the burning platform, what action is required, and which KPI is the hero",
-    "Specify RAG thresholds, benchmark comparisons, and an alert callout in the prompt so your first build already surfaces the risk signal — not buried in a table",
-    "Iterate with precision: name the single most important gap in your first output and fix only that in one follow-up",
-    "Deliver a board-ready HR dashboard a CHRO can present at an offsite without Excel — single HTML file, no server, no dependencies"
+    "Frame the people story before writing any prompt — decide which metric drives urgency and what decision HR leadership must make",
+    "Write your own AI prompt using a 5-area scaffold: audience, data, design, what to build, output rules",
+    "Test your first output against the data file — verify at least 3 figures before you iterate",
+    "Improve with one targeted follow-up instead of re-prompting from scratch",
+    "Deliver a board-ready HR dashboard a CHRO can present at an offsite — single HTML file, no server, no dependencies"
   ],
   "deliverable": "Single-file interactive HTML HR analytics dashboard"
 }

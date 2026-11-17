@@ -1,28 +1,18 @@
 # Brief
-> Get oriented. 5 minutes. Screenshots show the visual bar — your job is to know the deal story before you write it.
+> Understand the scenario. 5 minutes. Know the deal before you build anything.
 
 ## scenario
 
-**Client:** Calloway Industries — $2.4B industrial manufacturer, Houston TX
-**Deliverable:** Single-file interactive HTML proposal microsite
-**Audience:** Robert Chen (CPO), Sarah Whitfield (VP Operations), Marcus Webb (Head of IT & Digital)
-**Data files in your folder:** `calloway_deal_data.xlsx` · `calloway_competitor_grid.pdf` · `genpact_logo.png` · `screenshot_1.png` · `screenshot_2.png`
+**Prospect:** Calloway Industries
+**What you're building:** Single-file interactive HTML proposal microsite
+**Who will read it:** Robert Chen (CFO) and two other stakeholders — decision meeting this week
+**Files in your folder:** `calloway_deal_data.xlsx` · `calloway_competitor_grid.pdf` · `genpact_logo.png` · `screenshot_1.png` · `screenshot_2.png`
 
-## orient
-
-Before you move to Craft, form three things. Each fills a named placeholder in your prompt — the AI reads all the numbers.
-
-**Story** → fills `[OPENING_HOOK]` in your prompt
-What is the one sentence that makes Robert Chen stop scrolling — the cost of doing nothing, in numbers?
-
-**Risk** → fills `[COMPETITIVE_EDGE]` in your prompt
-Which Genpact differentiator directly answers the failed-implementation concern? One specific answer.
-
-**Hero** → fills `[CASE_STUDY_CHOICE]` in your prompt
-Which case study closes this deal for this specific buyer — and why is it the stronger proof point?
+The screenshots set the **design standard** — layout, colors, component style. Any numbers visible in the screenshots are illustrative. The actual data comes from the Excel and PDF files.
 
 ## do_this
 
-1. Open **screenshot_1.png** and **screenshot_2.png** — the design standard is set: Inter font, dark navy `#1E2A4A`, gold hero numbers, tab-strip layout. Match it.
-2. Open **calloway_deal_data.xlsx** — skim Stakeholders sheet and Pain Points sheet. 3 minutes is enough.
-3. Move to Craft only when you can fill Story, Risk, and Hero from memory.
+1. Open `calloway_deal_data.xlsx` — look at Company Profile, Pain Points & Value, and ROI Model. 3 minutes.
+2. Skim `calloway_competitor_grid.pdf` — note where Genpact wins and where the objections are. 1 minute.
+3. Open `screenshot_1.png` and `screenshot_2.png` — note the layout and visual style.
+4. When you can state the deal's risk and the CFO's core objection from memory, move to Frame.

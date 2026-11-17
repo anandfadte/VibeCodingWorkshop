@@ -1,31 +1,52 @@
-﻿# Build
-> Fire the prompt. Open in browser. Iterate once. Ship.
+﻿# Build & Iterate
+> Fire. Test. Improve once. Ship.
 
 ## scenario
 
-Your prompt is validated. Open Claude.ai in a new tab. Keep this platform tab open alongside it — you will need the done criteria below.
-
-Target: a working HR analytics dashboard in the browser within 10 minutes. Use any remaining time to iterate.
+Open your AI tool. Attach all five files. Paste your prompt. You have 20 minutes — 10 for the first build, 10 for one targeted improvement.
 
 ## do_this
 
-**Round 1 — First build:**
-1. Paste your full prompt into Claude.ai
-2. When Claude responds, copy the entire HTML code block
-3. Save as `hr_dashboard.html` on your desktop and double-click to open in a browser
-4. Check it against `screenshot_1.png` and `screenshot_2.png` — does it match the visual standard?
+**Round 1 — Build (10 minutes):**
+1. Open Claude.ai (or your AI tool) in a new tab
+2. Attach `genpact_hr_metrics.xlsx`, `hr_benchmark_targets.pdf`, `screenshot_1.png`, `screenshot_2.png`, and `genpact_logo.png`
+3. Paste your completed prompt
+4. Copy the full HTML code block from the response
+5. Save as `genpact_hr_dashboard.html` and open in Chrome or Edge
 
-**Round 2 — One targeted iteration:**
-Identify the single most important gap — usually it is a department card where the RAG color is not rendering correctly, or the $12.8M attrition cost tile that is not standing out as the visual hero. Write one follow-up instruction that fixes only that gap. Fire it in the same Claude conversation — do not start a new chat.
+**Check these three things before Round 2:**
+- Does the data look right? Spot-check the attrition rate and headcount figure against the HR Metrics sheet in the Excel file
+- Is the hero metric the most visually prominent section — larger, bolder, or more prominent than the others?
+- Does the benchmark comparison show clearly — is it obvious which metrics are above and which are below target?
 
-**If time permits — further refinements:**
-Ask Claude to: add a hover tooltip on each department card showing the headcount behind the attrition figure, animate the quarterly trend chart drawing on page load, or make the RAG chip pulse if attrition is more than 5 percentage points above benchmark.
+If the page doesn't open or shows errors, check the browser console (F12 → Console). A common fix: paste the HTML back to your AI and say "fix any JavaScript errors — the page is not rendering."
+
+**Round 2 — Improve once (10 minutes):**
+6. Identify the single most important gap between your output and what you aimed for in Frame
+7. Write one focused follow-up: "Change only [specific element] to [specific improvement]"
+8. Fire it in the same conversation — do not start a new chat
+9. Copy the new HTML and test again
+
+The constraint matters: one gap, one fix. This builds the habit of targeted iteration over re-prompting from scratch.
 
 ## checkpoint
 
-Done — confirm all five before presenting:
-- The $12.8M attrition cost tile is the visual hero — largest number on screen, 800 weight
-- Technology & Digital (or whichever department has attrition > 18%) renders unmistakably Red — #DC2626 chip, #FEF2F2 card background
-- The Attrition View / Engagement View toggle works — clicking it re-colours all five cards
-- The quarterly trend chart shows all four quarters with the Q3 spike labeled "Peak — investigate root cause"
-- File opens in a browser with no errors and all charts render
+Before presenting:
+- The hero metric is visually dominant — the number the CHRO acts on lands with weight
+- Benchmark comparisons are visible and clearly showing above/below
+- At least 2–3 figures are verified against `genpact_hr_metrics.xlsx`
+- You can describe in one sentence what your Round 2 improvement changed and why
+
+## reveal_good
+
+What separates an HR dashboard that prompts a decision from one that gets filed away is not the chart types. It is whether the opening metric creates urgency — whether the CHRO reads it and immediately knows what needs to happen next.
+
+The strongest first builds in this exercise open with the metric that is most off-track, not the metric that looks best. Attrition that is 2× benchmark is the opening. Revenue per headcount performing above target is supporting evidence.
+
+If your first build makes the most critical metric unmissable above the fold, Round 2 is about refinement, not rescue.
+
+## reveal_takeaway
+
+Every participant built from the same HR data. The dashboard you built reflects your judgement about which metric matters most for this leadership audience — which number creates urgency, which comparison tells the story.
+
+That is what professional vibe coding looks like: the AI executes, you direct. The judgment about what leadership needs to act on always belongs to you.

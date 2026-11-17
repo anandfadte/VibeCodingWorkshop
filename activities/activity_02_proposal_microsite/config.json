@@ -4,10 +4,10 @@
   "title": "Proposal Microsite",
   "subtitle": "Turn a prospect brief into an interactive deal summary your client actually wants to read.",
   "domain": "Sales & Business Development",
-  "duration_minutes": 30,
+  "duration_minutes": 40,
   "ai_tool": "Any AI tool (Claude, Copilot, Cursor, Gemini)",
   "difficulty": "Beginner",
-  "phases": 3,
+  "phases": 4,
   "plugins": [],
   "skill_chain": [],
   "data_files": [
@@ -43,11 +43,11 @@
     }
   ],
   "learning_objectives": [
-    "Attach a prospect brief and let the AI read every number — your job is persuasion strategy, not data lookup",
-    "Write the five things a data file cannot tell an AI: who is skeptical in the room, what hook opens the deal, which case study fits, which differentiator answers the objection, and what the CTA asks",
-    "Specify stakeholder cards and expandable interactions in the prompt so your first build is already a sales tool — not a static page",
-    "Iterate with precision: name the single most important gap in your first output and fix only that in one follow-up",
-    "Deliver a self-contained HTML proposal microsite a sales rep can open on a laptop in any client meeting — no server, no install, no dependencies"
+    "Frame the deal before writing any prompt — decide what Robert Chen needs to believe and what decision he must make",
+    "Write your own AI prompt using a 5-area scaffold: audience, data, design, what to build, output rules",
+    "Test your first output against the data file — verify at least 3 figures before you iterate",
+    "Improve with one targeted follow-up instead of re-prompting from scratch",
+    "Deliver a self-contained HTML microsite a sales rep can open on a laptop in any client meeting — no server, no install, no dependencies"
   ],
   "deliverable": "Single-file interactive HTML proposal microsite"
 }

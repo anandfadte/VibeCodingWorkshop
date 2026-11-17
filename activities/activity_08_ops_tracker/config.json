@@ -4,10 +4,10 @@
   "title": "Project Portfolio Tracker",
   "subtitle": "Build a live-looking RAG portfolio dashboard that tells leadership exactly where to focus.",
   "domain": "Client Delivery & Operations",
-  "duration_minutes": 30,
+  "duration_minutes": 40,
   "ai_tool": "Any AI tool (Claude, Copilot, Cursor, Gemini)",
   "difficulty": "Beginner",
-  "phases": 3,
+  "phases": 4,
   "plugins": [],
   "skill_chain": [],
   "data_files": [
@@ -43,10 +43,10 @@
     }
   ],
   "learning_objectives": [
-    "Attach a portfolio data file and let the AI read every RAG status, budget figure, and risk statement — your job is escalation judgment, not data lookup",
-    "Write the five things a tracker cannot tell an AI: who is running the review, what the management story is, which Red project is more urgent, and what specific action each escalation requires",
-    "Specify a RAG filter defaulting to Red view so leadership opens to escalations first — not buried in row 7 of a sorted table",
-    "Iterate with precision: name the single most important gap in your first output and fix only that in one follow-up",
+    "Frame the escalation story before writing any prompt — decide which projects need VP action today and what those decisions are",
+    "Write your own AI prompt using a 5-area scaffold: audience, data, design, what to build, output rules",
+    "Test your first output against the data file — verify at least 3 figures before you iterate",
+    "Improve with one targeted follow-up instead of re-prompting from scratch",
     "Deliver a portfolio dashboard that lets a VP run a 15-minute leadership review without PowerPoint — single HTML file, no server, no dependencies"
   ],
   "deliverable": "Single-file interactive HTML project portfolio dashboard"

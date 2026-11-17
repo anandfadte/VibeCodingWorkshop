@@ -1,28 +1,18 @@
 # Brief
-> Get oriented. 5 minutes. Screenshots show the visual bar — your job is to know the people-health story before you write it.
+> Understand the scenario. 5 minutes. Know the people data before you build anything.
 
 ## scenario
 
-**Organisation:** Genpact APAC Business Unit
-**Deliverable:** Single-file interactive HTML HR analytics dashboard
-**Audience:** ExCo — people health review, January 2025 offsite
-**Data files in your folder:** `genpact_hr_metrics.xlsx` · `hr_benchmark_targets.pdf` · `genpact_logo.png` · `screenshot_1.png` · `screenshot_2.png`
+**Organisation:** Genpact — Internal People Analytics
+**What you're building:** Single-file interactive HTML HR executive dashboard
+**Who will read it:** CHRO and HR leadership — quarterly people health review
+**Files in your folder:** `genpact_hr_metrics.xlsx` · `hr_benchmark_targets.pdf` · `genpact_logo.png` · `screenshot_1.png` · `screenshot_2.png`
 
-## orient
-
-Before you move to Craft, form three things. Each fills a named placeholder in your prompt — the AI reads all the numbers.
-
-**Story** → fills `[HEADLINE_RISK]` in your prompt
-What is the people-health story — cost, risk, and urgency in one sentence?
-
-**Risk** → fills `[BURNING_DEPARTMENT]` in your prompt
-Which department's combination of above-benchmark attrition AND below-benchmark engagement demands ExCo attention today?
-
-**Hero** → fills `[HERO_RATIONALE]` in your prompt
-Which KPI must visually dominate the scorecard — attrition cost, attrition %, engagement score, or headcount? Name it in one phrase.
+The screenshots set the **design standard** — layout, colors, component style. Any numbers visible in the screenshots are illustrative. The actual data comes from the Excel and PDF files.
 
 ## do_this
 
-1. Open **screenshot_1.png** and **screenshot_2.png** — the design standard is set: Inter font, teal `#0F766E`, RAG status tiles, simulation panel above charts. Match it.
-2. Open **genpact_hr_metrics.xlsx** — skim Headcount sheet and Engagement Scores sheet. 3 minutes is enough.
-3. Move to Craft only when you can fill Story, Risk, and Hero from memory.
+1. Open `genpact_hr_metrics.xlsx` — look at the HR Metrics and Attrition sheets. 3 minutes.
+2. Skim `hr_benchmark_targets.pdf` — note which metrics are above and below benchmark. 1 minute.
+3. Open `screenshot_1.png` and `screenshot_2.png` — note the layout and visual style.
+4. When you can name the most concerning metric and the department driving it from memory, move to Frame.

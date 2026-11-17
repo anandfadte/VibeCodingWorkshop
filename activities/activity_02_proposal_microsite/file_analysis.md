@@ -1,37 +1,38 @@
-﻿# Build
-> Fire. Open in browser. Watch the animations. Iterate once. Ship.
+﻿# Prompt
+> Write your prompt. The scaffold has 5 areas. Areas 1 and 4 are yours to write. Areas 2, 3, and 5 are pre-filled.
 
-## scenario
-You have a prompt with five narrative decisions already made. The AI will read all numbers from prospect_brief.json. Your one job now is to fire it, check the output against the design standard, and fix the single most important gap.
+## context
 
-## do_this
-**Step 1 — Fire**
-Attach prospect_brief.json to your AI conversation. Paste your completed prompt. Copy the HTML output.
+A prompt that produces a client-ready proposal microsite needs five things. Two require your judgement — they are blank below. The data instruction, design spec, and output rules are pre-filled to handle the technical constraints.
 
-**Step 2 — Open and compare**
-Save as calloway_proposal.html. Open in a browser. Compare against screenshot_2.png. Check:
-- Do the ROI numbers count up on load?
-- Is the total addressable cost visible and prominent?
-- Do the stakeholder cards expand on click?
+Copy the scaffold below into your AI tool. Write Areas 1 and 4 from your Frame answers. Leave Areas 2, 3, and 5 unchanged.
 
-**Step 3 — One targeted iteration**
-In the same conversation, describe the single most important gap: layout, a missing section, or animation not firing. Send one follow-up. Copy the updated HTML.
+## prompt
+
+Build a single-file HTML proposal microsite for Calloway Industries.
+
+AREA 1 — AUDIENCE & DECISION (write this yourself):
+Who is in the room? What is Robert Chen's specific concern or objection? What decision must the stakeholders make? Use your Frame answers here. 2–3 sentences. Be specific — name the CFO's concern and the actual commitment you need, not just "approve the proposal."
+
+AREA 2 — DATA (do not change this):
+Attach calloway_deal_data.xlsx, calloway_competitor_grid.pdf, screenshot_1.png, screenshot_2.png, and genpact_logo.png to this conversation. Read all cost figures, ROI calculations, timeline details, stakeholder concerns, and case study results directly from calloway_deal_data.xlsx — do not ask me for numbers, do not hardcode values.
+
+AREA 3 — DESIGN (do not change this):
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts@3.54.0/dist/apexcharts.min.js"></script>
+Inter font. Dark navy #1E2A4A background. Blue accent #3B82F6. Gold #F59E0B for hero ROI numbers. White card surfaces on navy. Embed genpact_logo.png in the microsite header. Match the layout and visual treatment shown in screenshot_1.png and screenshot_2.png exactly. Add entrance animations — the ROI hero number should count up on load.
+
+AREA 4 — WHAT TO BUILD (write this yourself):
+Describe the sections and interactions you decided on in Frame. What is the opening hook — the first thing Robert Chen sees? What is the hero section that makes the ROI case? Which sections address his specific objection? What is the call to action? Be specific — the AI builds exactly what you describe.
+
+AREA 5 — OUTPUT FORMAT (do not change this):
+One complete self-contained HTML file. All data from the attached Excel file — no hardcoded numbers, no fetch calls. Output the complete HTML file in one code block. Do not add explanation before or after. Do not truncate. Do not ask if I want to continue.
 
 ## checkpoint
-You are done when:
-- [ ] Total addressable cost animates from $0 on page load
-- [ ] 3-year ROI % and payback months are visible above the fold
-- [ ] All three stakeholder cards are present and expand on click
-- [ ] At least one case study section with industry match and client quote appears
-- [ ] No console errors — all animations fire on load
 
-## reveal_good
-A strong proposal microsite does three things at once:
-- Makes the pain **undeniable** — cost numbers so clear the buyer feels the gap before seeing the solution
-- Makes the solution **inevitable** — ROI so visible that not acting has a measurable cost
-- Makes the vendor **safe** — case studies that say "someone exactly like you has already done this and it worked"
-
-The stakeholder expandable cards are what separates this from a PDF. Each stakeholder sees their specific concern addressed — not generic value propositions.
-
-## reveal_takeaway
-The key lesson: an AI prompt for a sales asset is a persuasion brief, not a spec sheet. The five blanks you filled in — the hook, the case study choice, the CTA — are the difference between a microsite that gets forwarded and one that gets filed. The AI handled every number; you handled every decision.
+Before you fire:
+- Area 1 names Robert Chen's specific concern — not just "CFO approval"
+- Area 4 describes at least 3 sections with the opening hook and CTA clearly defined
+- All 5 files are ready to attach: calloway_deal_data.xlsx, calloway_competitor_grid.pdf, screenshot_1.png, screenshot_2.png, genpact_logo.png

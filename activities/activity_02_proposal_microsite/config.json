@@ -43,7 +43,7 @@
     }
   ],
   "learning_objectives": [
-    "Frame the deal before writing any prompt — decide what Robert Chen needs to believe and what decision he must make",
+    "Frame the deal before writing any prompt — decide what objection Robert Chen (VP IT) raises and what decision Sarah Chen (CFO) must make",
     "Write your own AI prompt using a 5-area scaffold: audience, data, design, what to build, output rules",
     "Test your first output against the data file — verify at least 3 figures before you iterate",
     "Improve with one targeted follow-up instead of re-prompting from scratch",

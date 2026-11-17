@@ -15,4 +15,4 @@ The screenshots set the **design standard** — layout, colors, component style.
 1. Open `calloway_deal_data.xlsx` — look at Company Profile, Pain Points & Value, and ROI Model. 3 minutes.
 2. Skim `calloway_competitor_grid.pdf` — note where Genpact wins and where the objections are. 1 minute.
 3. Open `screenshot_1.png` and `screenshot_2.png` — note the layout and visual style.
-4. When you can state the deal's risk and the CFO's core objection from memory, move to Frame.
+4. When you can state the deal's risk and Robert Chen's (VP IT) specific objection from memory, move to Frame.

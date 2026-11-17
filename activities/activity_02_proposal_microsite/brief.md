@@ -5,7 +5,7 @@
 
 **Prospect:** Calloway Industries
 **What you're building:** Single-file interactive HTML proposal microsite
-**Who will read it:** Robert Chen (CFO) and two other stakeholders — decision meeting this week
+**Who will read it:** Sarah Chen (CFO), Robert Chen (VP IT), and two other stakeholders — decision meeting this week
 **Files in your folder:** `calloway_deal_data.xlsx` · `calloway_competitor_grid.pdf` · `genpact_logo.png` · `screenshot_1.png` · `screenshot_2.png`
 
 The screenshots set the **design standard** — layout, colors, component style. Any numbers visible in the screenshots are illustrative. The actual data comes from the Excel and PDF files.

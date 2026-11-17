@@ -15,7 +15,7 @@ AREA 1 — AUDIENCE & DECISION (write this yourself):
 Who is in the room? What is the specific decision HR leadership needs to make? What metric or trend is driving urgency? Use your Frame answers here. 2–3 sentences. Be specific — name the audience level and the actual decision, not just "CHRO review."
 
 AREA 2 — DATA (do not change this):
-Attach genpact_hr_metrics.xlsx, hr_benchmark_targets.pdf, screenshot_1.png, screenshot_2.png, and genpact_logo.png to this conversation. Read all headcount, attrition, performance, and DEI figures directly from genpact_hr_metrics.xlsx — do not ask me for numbers, do not hardcode values.
+Attach genpact_hr_metrics.xlsx, hr_benchmark_targets.pdf, screenshot_1.png, screenshot_2.png, and genpact_logo.png to this conversation. Read all headcount, attrition, engagement scores, and exit survey figures directly from genpact_hr_metrics.xlsx — do not ask me for numbers, do not hardcode values.
 
 AREA 3 — DESIGN (do not change this):
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">

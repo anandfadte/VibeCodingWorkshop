@@ -12,7 +12,7 @@ Copy the scaffold below into your AI tool. Write Areas 1 and 4 from your Frame a
 Build a single-file HTML proposal microsite for Calloway Industries.
 
 AREA 1 — AUDIENCE & DECISION (write this yourself):
-Who is in the room? What is Robert Chen's specific concern or objection? What decision must the stakeholders make? Use your Frame answers here. 2–3 sentences. Be specific — name the CFO's concern and the actual commitment you need, not just "approve the proposal."
+Who is in the room? What is Robert Chen's (VP IT) specific concern about the past implementation failure? What decision must Sarah Chen (CFO) and the committee make? Use your Frame answers here. 2–3 sentences. Be specific — name the VP IT objection and the CFO's commitment you need, not just "approve the proposal."
 
 AREA 2 — DATA (do not change this):
 Attach calloway_deal_data.xlsx, calloway_competitor_grid.pdf, screenshot_1.png, screenshot_2.png, and genpact_logo.png to this conversation. Read all cost figures, ROI calculations, timeline details, stakeholder concerns, and case study results directly from calloway_deal_data.xlsx — do not ask me for numbers, do not hardcode values.

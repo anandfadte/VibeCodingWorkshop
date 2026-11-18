@@ -10,6 +10,8 @@
 
 The screenshots set the **design standard** — layout, colors, component style. Any numbers visible in the screenshots are illustrative. The actual data comes from the Excel and PDF files.
 
+Two projects are Red. $8.2M of revenue is at risk across four engagements. The VP Client Delivery needs to walk into tomorrow's leadership review knowing which projects require a decision — not which ones have a problem. A VP who reviews a problem list leaves with questions. A VP who reviews a decision list leaves with actions. The dashboard has to make that distinction before the meeting starts.
+
 ## do_this
 
 1. Open `apac_portfolio_tracker.xlsx` — look at Portfolio Scorecard and Escalation Cards. 3 minutes.

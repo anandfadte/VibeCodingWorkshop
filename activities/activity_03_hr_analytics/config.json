@@ -47,7 +47,7 @@
     "Write your own AI prompt using a 5-area scaffold: audience, data, design, what to build, output rules",
     "Test your first output against the data file — verify at least 3 figures before you iterate",
     "Improve with one targeted follow-up instead of re-prompting from scratch",
-    "Deliver a board-ready HR dashboard a CHRO can present at an offsite — single HTML file, no server, no dependencies"
+    "Make audience-appropriate data decisions — which metric drives the narrative, what comparison creates urgency, and what decision the CHRO must own before the offsite ends"
   ],
   "deliverable": "Single-file interactive HTML HR analytics dashboard"
 }

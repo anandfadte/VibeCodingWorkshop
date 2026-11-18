@@ -47,7 +47,7 @@
     "Write your own AI prompt using a 5-area scaffold: audience, data, design, what to build, output rules",
     "Test your first output against the data file — verify at least 3 figures before you iterate",
     "Improve with one targeted follow-up instead of re-prompting from scratch",
-    "Deliver a decision-ready campaign report that replaces a 20-slide deck with one interactive HTML file — no server, no install, no dependencies"
+    "Make argument-first design decisions — what the opening number must be, which channel comparison drives the recommendation, and what the CMO needs to defend to the CFO in the room"
   ],
   "deliverable": "Single-file interactive HTML campaign performance report"
 }

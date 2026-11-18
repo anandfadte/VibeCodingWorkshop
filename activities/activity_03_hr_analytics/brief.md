@@ -4,11 +4,14 @@
 ## scenario
 
 **Organisation:** Genpact — Internal People Analytics
+**Your role:** Genpact People Analytics team — you are preparing the quarterly people-health review for the CHRO. Attrition in delivery operations is running above Mercer benchmark for the third consecutive quarter.
 **What you're building:** Single-file interactive HTML HR executive dashboard
 **Who will read it:** CHRO and HR leadership — quarterly people health review
 **Files in your folder:** `genpact_hr_metrics.xlsx` · `hr_benchmark_targets.pdf` · `genpact_logo.png` · `screenshot_1.png` · `screenshot_2.png`
 
 The screenshots set the **design standard** — layout, colors, component style. Any numbers visible in the screenshots are illustrative. The actual data comes from the Excel and PDF files.
+
+The last people review was a wall of numbers with no clear story. The CHRO left without a decision to make, and six weeks passed before anyone acted on attrition. This quarter the gap versus benchmark has widened. If the dashboard doesn't surface a clear decision — not just a data summary — the leadership will review the numbers and defer again.
 
 ## do_this
 

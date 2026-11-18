@@ -47,7 +47,7 @@
     "Write your own AI prompt using a 5-area scaffold: audience, data, design, what to build, output rules",
     "Test your first output against the data file — verify at least 3 figures before you iterate",
     "Improve with one targeted follow-up instead of re-prompting from scratch",
-    "Deliver a self-contained HTML microsite a sales rep can open on a laptop in any client meeting — no server, no install, no dependencies"
+    "Make deal-specific design decisions — what objection to address first, where the ROI lands on the page, and what the CFO must understand before the final vote"
   ],
   "deliverable": "Single-file interactive HTML proposal microsite"
 }

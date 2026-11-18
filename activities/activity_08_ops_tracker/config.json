@@ -47,7 +47,7 @@
     "Write your own AI prompt using a 5-area scaffold: audience, data, design, what to build, output rules",
     "Test your first output against the data file — verify at least 3 figures before you iterate",
     "Improve with one targeted follow-up instead of re-prompting from scratch",
-    "Deliver a portfolio dashboard that lets a VP run a 15-minute leadership review without PowerPoint — single HTML file, no server, no dependencies"
+    "Make escalation-first design decisions — which projects lead the narrative, what the VP must decide before leaving the room, and how to make a Red status impossible to defer"
   ],
   "deliverable": "Single-file interactive HTML project portfolio dashboard"
 }

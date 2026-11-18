@@ -41,7 +41,7 @@
     "Write your own AI prompt using a 5-area scaffold: audience, data, design, what to build, output rules",
     "Test your first output against the data file — verify at least 3 figures before you iterate",
     "Improve with one targeted follow-up instead of re-prompting from scratch",
-    "Deliver a self-contained HTML file that opens in any browser — no install, no server, no dependencies"
+    "Make audience-appropriate design decisions — what to surface, what to leave out, and what the leadership team must leave the room knowing"
   ],
   "deliverable": "Single-file interactive HTML QBR dashboard"
 }

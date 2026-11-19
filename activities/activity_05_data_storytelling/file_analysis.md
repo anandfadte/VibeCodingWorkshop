@@ -1,10 +1,6 @@
 ﻿# Prompt
 > Write your prompt. The scaffold has 5 areas. Areas 1 and 4 are yours to write. Areas 2, 3, and 5 are pre-filled.
 
-## context
-
-Enter your prompt: role · context · controls · task · output format
-
 ## prompt
 
 Build a single-file HTML campaign performance report for the Genpact Enterprise Intelligence Suite launch.
@@ -30,7 +26,4 @@ One complete self-contained HTML file. All data from the attached Excel file —
 
 ## checkpoint
 
-Before you fire:
-- Area 1 is filled — your audience and budget decision from Frame
-- Area 4 is filled — what you're building from Frame
-- All 5 files are ready to attach: campaign_q3_results.xlsx, q4_budget_brief.pdf, screenshot_1.png, screenshot_2.png, genpact_logo.png
+Enter your prompt.

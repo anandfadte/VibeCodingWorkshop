@@ -219,9 +219,9 @@ export function ActivityPhases({ slug, phases, dataFiles = [], durationMinutes }
                   <div className="prose text-text-secondary" dangerouslySetInnerHTML={{ __html: phase.content.context }} />
                 )}
 
-                {phase.content.context && phase.content.prompt && (
+                {phase.content.prompt && (
                   <PromptTabs
-                    context={phase.content.context}
+                    context={phase.content.context ?? ""}
                     prompt={phase.content.prompt}
                     prompt2={phase.content.prompt2}
                     phaseKey={phase.key}
@@ -241,12 +241,6 @@ export function ActivityPhases({ slug, phases, dataFiles = [], durationMinutes }
                   <SkillChainDisplay raw={phase.content.skillChain} />
                 )}
 
-                {phase.content.prompt && !phase.content.context && (
-                  <PromptBox text={phase.content.prompt} label={phase.content.prompt2 ? "Prompt 1" : "Copy this prompt"} />
-                )}
-                {phase.content.prompt2 && !phase.content.context && (
-                  <PromptBox text={phase.content.prompt2} label="Prompt 2" />
-                )}
 
                 {phase.content.tip && (
                   <div className="rounded-lg border-2 border-emerald-300 bg-emerald-50 dark:border-emerald-500/30 dark:bg-emerald-950/40 p-4">

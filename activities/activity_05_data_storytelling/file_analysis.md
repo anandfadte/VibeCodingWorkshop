@@ -3,7 +3,7 @@
 
 ## context
 
-Write your prompt using a 5-part structure: role, context, controls, task, and output format. Open the Prompt tab, fill in the two areas marked as yours, then copy the full prompt into Claude / GitHub Copilot.
+Enter your prompt: role · context · controls · task · output format
 
 ## prompt
 

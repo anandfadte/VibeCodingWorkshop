@@ -466,7 +466,20 @@ function PromptTabs({ context, prompt, prompt2, phaseKey, isUnlocked, onUnlock }
       </div>
 
       {activeTab === "guide" && (
-        <div className="prose text-text-secondary" dangerouslySetInnerHTML={{ __html: context }} />
+        <div className="space-y-2">
+          {[
+            { label: "Role", area: "Area 1" },
+            { label: "Context", area: "Area 2" },
+            { label: "Control", area: "Area 3" },
+            { label: "Task", area: "Area 4" },
+            { label: "Output", area: "Area 5" },
+          ].map(({ label, area }) => (
+            <div key={label} className="flex items-center gap-3 rounded-lg border border-border bg-surface-alt px-4 py-2.5">
+              <span className="text-sm font-semibold text-text-primary">{label}</span>
+              <span className="text-xs text-text-muted">({area})</span>
+            </div>
+          ))}
+        </div>
       )}
 
       {activeTab === "prompt" && !isUnlocked && (

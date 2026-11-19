@@ -1,5 +1,5 @@
 ﻿# Prompt
-> Write your prompt. The scaffold has 5 areas. Areas 1 and 4 are yours to write. Areas 2, 3, and 5 are pre-filled.
+> Write your prompt.
 
 ## prompt
 

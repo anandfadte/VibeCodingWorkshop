@@ -50,6 +50,7 @@ export function ActivityPhases({ slug, phases, dataFiles = [], durationMinutes }
   );
   const [revealOpen, setRevealOpen] = useState(false);
   const [unlockedPrompts, setUnlockedPrompts] = useState<Set<string>>(new Set());
+  const [draftPrompts, setDraftPrompts] = useState<Record<string, string>>({});
   const phaseRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const [timerSeconds, setTimerSeconds] = useState(durationMinutes * 60);
@@ -220,14 +221,20 @@ export function ActivityPhases({ slug, phases, dataFiles = [], durationMinutes }
                 )}
 
                 {phase.content.prompt && (
-                  <PromptTabs
-                    context={phase.content.context ?? ""}
-                    prompt={phase.content.prompt}
-                    prompt2={phase.content.prompt2}
-                    phaseKey={phase.key}
-                    isUnlocked={unlockedPrompts.has(phase.key)}
-                    onUnlock={() => setUnlockedPrompts((prev) => new Set([...prev, phase.key]))}
-                  />
+                  <>
+                    <PromptTabs
+                      context={phase.content.context ?? ""}
+                      prompt={phase.content.prompt}
+                      prompt2={phase.content.prompt2}
+                      phaseKey={phase.key}
+                      isUnlocked={unlockedPrompts.has(phase.key)}
+                      onUnlock={() => setUnlockedPrompts((prev) => new Set([...prev, phase.key]))}
+                    />
+                    <DraftPromptBox
+                      value={draftPrompts[phase.key] ?? ""}
+                      onChange={(val) => setDraftPrompts((prev) => ({ ...prev, [phase.key]: val }))}
+                    />
+                  </>
                 )}
 
                 {phase.content.doThis && (
@@ -251,7 +258,7 @@ export function ActivityPhases({ slug, phases, dataFiles = [], durationMinutes }
                   </div>
                 )}
 
-                {phase.content.checkpoint && (
+                {phase.content.checkpoint && !phase.content.prompt && (
                   <div className="rounded-lg border-2 border-blue-300 bg-blue-50 dark:border-blue-500/30 dark:bg-blue-950/40 p-4">
                     <div className="text-xs font-bold uppercase tracking-wider text-blue-700 dark:text-blue-400 mb-2">Before You Move On</div>
                     <div className="prose text-blue-900 dark:text-blue-100 text-sm" dangerouslySetInnerHTML={{ __html: phase.content.checkpoint }} />
@@ -384,6 +391,40 @@ function SkillChainDisplay({ raw }: { raw: string }) {
         ))}
       </div>
       <p className="mt-2 text-xs text-text-muted">Run each skill in the <strong className="text-text-secondary">same AI conversation</strong> — context compounds across each step.</p>
+    </div>
+  );
+}
+
+function DraftPromptBox({ value, onChange }: { value: string; onChange: (val: string) => void }) {
+  const [copied, setCopied] = useState(false);
+
+  function copyDraft() {
+    navigator.clipboard.writeText(value).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }).catch(() => {});
+  }
+
+  return (
+    <div className="space-y-2">
+      <div className="flex items-center justify-between">
+        <label className="text-sm font-medium text-text-secondary">Draft your prompt here</label>
+        <button
+          onClick={copyDraft}
+          disabled={!value.trim()}
+          className="inline-flex items-center gap-1.5 rounded-md border border-border bg-surface-alt px-3 py-1 text-xs font-semibold text-text-secondary transition-colors hover:bg-surface disabled:opacity-40"
+        >
+          {copied ? <CheckCheck size={13} className="text-green-400" /> : <Copy size={13} />}
+          {copied ? "Copied!" : "Copy"}
+        </button>
+      </div>
+      <textarea
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder="Type your prompt here, then copy it into Claude / GitHub Copilot..."
+        rows={8}
+        className="w-full resize-y rounded-lg border border-border bg-[#111827] px-4 py-3 font-mono text-sm leading-relaxed text-gray-200 placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-accent"
+      />
     </div>
   );
 }

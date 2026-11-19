@@ -49,6 +49,7 @@ export function ActivityPhases({ slug, phases, dataFiles = [], durationMinutes }
     phases.map((_, i) => (i === 0 ? "active" : "locked"))
   );
   const [revealOpen, setRevealOpen] = useState(false);
+  const [unlockedPrompts, setUnlockedPrompts] = useState<Set<string>>(new Set());
   const phaseRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const [timerSeconds, setTimerSeconds] = useState(durationMinutes * 60);
@@ -214,8 +215,19 @@ export function ActivityPhases({ slug, phases, dataFiles = [], durationMinutes }
                   </div>
                 )}
 
-                {phase.content.context && (
+                {phase.content.context && !phase.content.prompt && (
                   <div className="prose text-text-secondary" dangerouslySetInnerHTML={{ __html: phase.content.context }} />
+                )}
+
+                {phase.content.context && phase.content.prompt && (
+                  <PromptTabs
+                    context={phase.content.context}
+                    prompt={phase.content.prompt}
+                    prompt2={phase.content.prompt2}
+                    phaseKey={phase.key}
+                    isUnlocked={unlockedPrompts.has(phase.key)}
+                    onUnlock={() => setUnlockedPrompts((prev) => new Set([...prev, phase.key]))}
+                  />
                 )}
 
                 {phase.content.doThis && (
@@ -229,10 +241,10 @@ export function ActivityPhases({ slug, phases, dataFiles = [], durationMinutes }
                   <SkillChainDisplay raw={phase.content.skillChain} />
                 )}
 
-                {phase.content.prompt && (
+                {phase.content.prompt && !phase.content.context && (
                   <PromptBox text={phase.content.prompt} label={phase.content.prompt2 ? "Prompt 1" : "Copy this prompt"} />
                 )}
-                {phase.content.prompt2 && (
+                {phase.content.prompt2 && !phase.content.context && (
                   <PromptBox text={phase.content.prompt2} label="Prompt 2" />
                 )}
 
@@ -378,6 +390,73 @@ function SkillChainDisplay({ raw }: { raw: string }) {
         ))}
       </div>
       <p className="mt-2 text-xs text-text-muted">Run each skill in the <strong className="text-text-secondary">same AI conversation</strong> — context compounds across each step.</p>
+    </div>
+  );
+}
+
+function PromptTabs({ context, prompt, prompt2, phaseKey, isUnlocked, onUnlock }: {
+  context: string;
+  prompt: string;
+  prompt2?: string;
+  phaseKey: string;
+  isUnlocked: boolean;
+  onUnlock: () => void;
+}) {
+  const [activeTab, setActiveTab] = useState<"guide" | "prompt">("guide");
+
+  return (
+    <div>
+      <div className="flex border-b border-border mb-4">
+        <button
+          onClick={() => setActiveTab("guide")}
+          className={`px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-colors ${
+            activeTab === "guide"
+              ? "border-accent text-accent"
+              : "border-transparent text-text-muted hover:text-text-primary"
+          }`}
+        >
+          Guide
+        </button>
+        <button
+          onClick={() => setActiveTab("prompt")}
+          className={`inline-flex items-center gap-1.5 px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-colors ${
+            activeTab === "prompt"
+              ? "border-accent text-accent"
+              : "border-transparent text-text-muted hover:text-text-primary"
+          }`}
+        >
+          {!isUnlocked && <Lock size={12} />}
+          {isUnlocked ? "Prompt scaffold" : "Unlock prompt"}
+        </button>
+      </div>
+
+      {activeTab === "guide" && (
+        <div className="prose text-text-secondary" dangerouslySetInnerHTML={{ __html: context }} />
+      )}
+
+      {activeTab === "prompt" && !isUnlocked && (
+        <div className="flex flex-col items-center py-8 gap-3">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-surface-alt border border-border">
+            <Lock size={20} className="text-accent" />
+          </div>
+          <p className="text-sm text-text-secondary text-center max-w-xs">
+            Made your decisions? Reveal the full prompt scaffold.
+          </p>
+          <button
+            onClick={onUnlock}
+            className="inline-flex items-center gap-1.5 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent/90 transition-colors"
+          >
+            Reveal prompt
+          </button>
+        </div>
+      )}
+
+      {activeTab === "prompt" && isUnlocked && (
+        <>
+          <PromptBox text={prompt} label={prompt2 ? "Prompt 1" : "Copy this prompt"} />
+          {prompt2 && <PromptBox text={prompt2} label="Prompt 2" />}
+        </>
+      )}
     </div>
   );
 }

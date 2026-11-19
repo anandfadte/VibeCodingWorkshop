@@ -8,7 +8,7 @@ Open your AI tool. Attach all five files. Paste your prompt. You have 20 minutes
 ## do_this
 
 **Round 1 — Build (10 minutes):**
-1. Open Claude.ai (or your AI tool) in a new tab
+1. Open Claude / GitHub Copilot (or your AI tool) in a new tab
 2. Attach `campaign_q3_results.xlsx`, `q4_budget_brief.pdf`, `screenshot_1.png`, `screenshot_2.png`, and `genpact_logo.png`
 3. Paste your completed prompt
 4. Copy the full HTML code block from the response

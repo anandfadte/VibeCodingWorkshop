@@ -3,9 +3,7 @@
 
 ## context
 
-A prompt that produces a client-ready dashboard needs five things. Two require your judgement — they are blank below. The data instruction, design spec, and output rules are pre-filled to handle the technical constraints.
-
-Copy the scaffold below into your AI tool. Write Areas 1 and 4 from your Frame answers. Leave Areas 2, 3, and 5 unchanged.
+Write your prompt using a 5-part structure: role, context, controls, task, and output format. Open the Prompt tab, fill in the two areas marked as yours, then copy the full prompt into Claude / GitHub Copilot.
 
 ## prompt
 
